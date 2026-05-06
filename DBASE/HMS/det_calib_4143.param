@@ -1,0 +1,4 @@
+; HMS NPS23 DC calibration for run 4143
+#include "PARAM/HMS/DC/hdc_calib_4143.param"
+#include "PARAM/HMS/DC/hdc_tzero_per_wire_4143.param"
+#include "PARAM/HMS/CAL/hcal_calib_4064.param"

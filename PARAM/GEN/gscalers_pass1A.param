@@ -1,4 +1,5 @@
-; cploen: preliminary pass1 values for Fall 2023 NPS run, based on BCM calibration runs 1422, 3346, 3588, 4710, 6145, 6813 taken starting Sept 25, 2023.  
+; cploen: final values for Fall 2023 NPS run, based on both Faraday Cup run 4709 and BCM calibration runs 1422, 3346, 3588, 4710, 6145, 6813 taken starting Sept 25, 2023.  
+; FCup results shared in https://hallcweb.jlab.org/elogs/NPS-RG1a-Analysis/185.  Findings suggested offset adjustment for BCM4A and a current threshold increase from 2.0uA to 2.5uA. 
 ; BCM4C had step change in gain twice throughout run period, at runs 2982 and 5524; the 3 calibration files reflect this
 ; the other bcms did not demonstrate drifts corresponding to temperature/season.
 
@@ -11,10 +12,10 @@
 gNumBCMs    = 6
 gBCM_Names  = " BCM1      BCM2      Unser	BCM4A    BCM4B   BCM4C"
 gBCM_Gain =            5741.,     5707.,     400.6,      9597.,    43080.,    1332.
-gBCM_Offset =           1108.,   249300.,  359700.,      -1839.,   -8962.,     250.
+gBCM_Offset =           1108.,   250000.,  359700.,      177.3,   -8962.,     250.
 gBCM_SatOffset =         50.,       50.,    1000.,       1000.,     1000.,    1000. 
 gBCM_SatQuadratic =  0.00175,     0.002,       0.,       0.,     0.0,    0.0 
 
-gBCM_Current_threshold = 2.0
+gBCM_Current_threshold = 2.5
 ; index = 0 to gNumBCMs-1
 gBCM_Current_threshold_index = 3

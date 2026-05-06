@@ -1,0 +1,4 @@
+; HMS NPS23 DC calibration for run 2022
+#include "PARAM/HMS/DC/hdc_calib_2022.param"
+#include "PARAM/HMS/DC/hdc_tzero_per_wire_2022.param"
+#include "PARAM/HMS/CAL/hcal_calib_2057.param"

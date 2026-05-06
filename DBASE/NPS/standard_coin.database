@@ -519,6 +519,9 @@ g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3389.param"
 3570-3667
 g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3596.param"
 
+3728-3782
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3728.param"
+
 4047-4169
 g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4064.param"
 
@@ -627,3 +630,2478 @@ g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2411.param"
 6698 - 6873
 g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6873.param"
 
+
+
+; ===== NPS23 per-run HMS det_calib (dc and hcal) overrides added 2026-04-02 =====
+
+2020 - 2020
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2020.param"
+
+2021 - 2021
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2021.param"
+
+2022 - 2022
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2022.param"
+
+2023 - 2023
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2023.param"
+
+2024 - 2024
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2024.param"
+
+2025 - 2025
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2025.param"
+
+2026 - 2026
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2026.param"
+
+2027 - 2027
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2027.param"
+
+2028 - 2028
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2028.param"
+
+2029 - 2029
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2029.param"
+
+2030 - 2030
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2030.param"
+
+2031 - 2031
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2031.param"
+
+2032 - 2032
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2032.param"
+
+2033 - 2033
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2033.param"
+
+2035 - 2035
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2035.param"
+
+2036 - 2036
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2036.param"
+
+2037 - 2037
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2037.param"
+
+2038 - 2038
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2038.param"
+
+2039 - 2039
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2039.param"
+
+2040 - 2040
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2040.param"
+
+2041 - 2041
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2041.param"
+
+2042 - 2042
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2042.param"
+
+2043 - 2043
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2043.param"
+
+2044 - 2044
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2044.param"
+
+2045 - 2045
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2045.param"
+
+2046 - 2046
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2046.param"
+
+2047 - 2047
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2047.param"
+
+2048 - 2048
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2048.param"
+
+2051 - 2051
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2051.param"
+
+2052 - 2052
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2052.param"
+
+2053 - 2053
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2053.param"
+
+2054 - 2054
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2054.param"
+
+2055 - 2055
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2055.param"
+
+2056 - 2056
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2056.param"
+
+2057 - 2057
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2057.param"
+
+2058 - 2058
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2058.param"
+
+2059 - 2059
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2059.param"
+
+2060 - 2060
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2060.param"
+
+2061 - 2061
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2061.param"
+
+2062 - 2062
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2062.param"
+
+2063 - 2063
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2063.param"
+
+2065 - 2065
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2065.param"
+
+2066 - 2066
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2066.param"
+
+2067 - 2067
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2067.param"
+
+2068 - 2068
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2068.param"
+
+2069 - 2069
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2069.param"
+
+2070 - 2070
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2070.param"
+
+2071 - 2071
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2071.param"
+
+2072 - 2072
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2072.param"
+
+2073 - 2073
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2073.param"
+
+2074 - 2074
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2074.param"
+
+2075 - 2075
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2075.param"
+
+2076 - 2076
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2076.param"
+
+2077 - 2077
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2077.param"
+
+2078 - 2078
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2078.param"
+
+2079 - 2079
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2079.param"
+
+2080 - 2080
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2080.param"
+
+2081 - 2081
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2081.param"
+
+2082 - 2082
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2082.param"
+
+2083 - 2083
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2083.param"
+
+2084 - 2084
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2084.param"
+
+2085 - 2085
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2085.param"
+
+2086 - 2086
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2086.param"
+
+2087 - 2087
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2087.param"
+
+2088 - 2088
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2088.param"
+
+2089 - 2089
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2089.param"
+
+2090 - 2090
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2090.param"
+
+2091 - 2091
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2091.param"
+
+2092 - 2092
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2092.param"
+
+2093 - 2093
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2093.param"
+
+2094 - 2094
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2094.param"
+
+2095 - 2095
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2095.param"
+
+2096 - 2096
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2096.param"
+
+2097 - 2097
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2097.param"
+
+2098 - 2098
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2098.param"
+
+2099 - 2099
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2099.param"
+
+2100 - 2100
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2100.param"
+
+2101 - 2101
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2101.param"
+
+2102 - 2102
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2102.param"
+
+2103 - 2103
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2103.param"
+
+2104 - 2104
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2104.param"
+
+2105 - 2105
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2105.param"
+
+2106 - 2106
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2106.param"
+
+2107 - 2107
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2107.param"
+
+2108 - 2108
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2108.param"
+
+2109 - 2109
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2109.param"
+
+2110 - 2110
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2110.param"
+
+2111 - 2111
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2111.param"
+
+2112 - 2112
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2112.param"
+
+2113 - 2113
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2113.param"
+
+2114 - 2114
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2114.param"
+
+2115 - 2115
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2115.param"
+
+2116 - 2116
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2116.param"
+
+2117 - 2117
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2117.param"
+
+2118 - 2118
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2118.param"
+
+2121 - 2121
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2121.param"
+
+2122 - 2122
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2122.param"
+
+2123 - 2123
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2123.param"
+
+2124 - 2124
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2124.param"
+
+2125 - 2125
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2125.param"
+
+2126 - 2126
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2126.param"
+
+2127 - 2127
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2127.param"
+
+2128 - 2128
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2128.param"
+
+2129 - 2129
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2129.param"
+
+2130 - 2130
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2130.param"
+
+2131 - 2131
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2131.param"
+
+2133 - 2133
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2133.param"
+
+2143 - 2143
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2143.param"
+
+2144 - 2144
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2144.param"
+
+2145 - 2145
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2145.param"
+
+2146 - 2146
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2146.param"
+
+2153 - 2153
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2153.param"
+
+2154 - 2154
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2154.param"
+
+2155 - 2155
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2155.param"
+
+2156 - 2156
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2156.param"
+
+2157 - 2157
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2157.param"
+
+2158 - 2158
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2158.param"
+
+2159 - 2159
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2159.param"
+
+2160 - 2160
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2160.param"
+
+2161 - 2161
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2161.param"
+
+2162 - 2162
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2162.param"
+
+2163 - 2163
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2163.param"
+
+2164 - 2164
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2164.param"
+
+2165 - 2165
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2165.param"
+
+2166 - 2166
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2166.param"
+
+2167 - 2167
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2167.param"
+
+2168 - 2168
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2168.param"
+
+2169 - 2169
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2169.param"
+
+2170 - 2170
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2170.param"
+
+2171 - 2171
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2171.param"
+
+2172 - 2172
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2172.param"
+
+2173 - 2173
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2173.param"
+
+2174 - 2174
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2174.param"
+
+2175 - 2175
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2175.param"
+
+2176 - 2176
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2176.param"
+
+2177 - 2177
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2177.param"
+
+2178 - 2178
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2178.param"
+
+2179 - 2179
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2179.param"
+
+2180 - 2180
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2180.param"
+
+2181 - 2181
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2181.param"
+
+2182 - 2182
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2182.param"
+
+2183 - 2183
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_2183.param"
+
+3119 - 3119
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3119.param"
+
+3120 - 3120
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3120.param"
+
+3121 - 3121
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3121.param"
+
+3122 - 3122
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3122.param"
+
+3123 - 3123
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3123.param"
+
+3124 - 3124
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3124.param"
+
+3125 - 3125
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3125.param"
+
+3126 - 3126
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3126.param"
+
+3127 - 3127
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3127.param"
+
+3128 - 3128
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3128.param"
+
+3129 - 3129
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3129.param"
+
+3130 - 3130
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3130.param"
+
+3131 - 3131
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3131.param"
+
+3132 - 3132
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3132.param"
+
+3136 - 3136
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3136.param"
+
+3137 - 3137
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3137.param"
+
+3138 - 3138
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3138.param"
+
+3139 - 3139
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3139.param"
+
+3140 - 3140
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3140.param"
+
+3141 - 3141
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3141.param"
+
+3142 - 3142
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3142.param"
+
+3143 - 3143
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3143.param"
+
+3144 - 3144
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3144.param"
+
+3145 - 3145
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3145.param"
+
+3146 - 3146
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3146.param"
+
+3147 - 3147
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3147.param"
+
+3148 - 3148
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3148.param"
+
+3149 - 3149
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3149.param"
+
+3150 - 3150
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3150.param"
+
+3151 - 3151
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3151.param"
+
+3152 - 3152
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3152.param"
+
+3153 - 3153
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3153.param"
+
+3154 - 3154
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3154.param"
+
+3155 - 3155
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3155.param"
+
+3156 - 3156
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3156.param"
+
+3157 - 3157
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3157.param"
+
+3158 - 3158
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3158.param"
+
+3159 - 3159
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3159.param"
+
+3160 - 3160
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3160.param"
+
+3161 - 3161
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3161.param"
+
+3162 - 3162
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3162.param"
+
+3163 - 3163
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3163.param"
+
+3164 - 3164
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3164.param"
+
+3165 - 3165
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3165.param"
+
+3166 - 3166
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3166.param"
+
+3167 - 3167
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3167.param"
+
+3168 - 3168
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3168.param"
+
+3169 - 3169
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3169.param"
+
+3170 - 3170
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3170.param"
+
+3171 - 3171
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3171.param"
+
+3172 - 3172
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3172.param"
+
+3173 - 3173
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3173.param"
+
+3174 - 3174
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3174.param"
+
+3175 - 3175
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3175.param"
+
+3176 - 3176
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3176.param"
+
+3177 - 3177
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3177.param"
+
+3178 - 3178
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3178.param"
+
+3179 - 3179
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3179.param"
+
+3180 - 3180
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3180.param"
+
+3181 - 3181
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3181.param"
+
+3182 - 3182
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3182.param"
+
+3183 - 3183
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3183.param"
+
+3184 - 3184
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3184.param"
+
+3185 - 3185
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3185.param"
+
+3186 - 3186
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3186.param"
+
+3187 - 3187
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3187.param"
+
+3188 - 3188
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3188.param"
+
+3189 - 3189
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3189.param"
+
+3190 - 3190
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3190.param"
+
+3191 - 3191
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3191.param"
+
+3192 - 3192
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3192.param"
+
+3193 - 3193
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3193.param"
+
+3194 - 3194
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3194.param"
+
+3195 - 3195
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3195.param"
+
+3196 - 3196
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3196.param"
+
+3197 - 3197
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3197.param"
+
+3198 - 3198
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3198.param"
+
+3199 - 3199
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3199.param"
+
+3200 - 3200
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3200.param"
+
+3201 - 3201
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3201.param"
+
+3202 - 3202
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3202.param"
+
+3203 - 3203
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3203.param"
+
+3204 - 3204
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3204.param"
+
+3205 - 3205
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3205.param"
+
+3206 - 3206
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3206.param"
+
+3207 - 3207
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3207.param"
+
+3208 - 3208
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3208.param"
+
+3209 - 3209
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3209.param"
+
+3210 - 3210
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3210.param"
+
+3211 - 3211
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3211.param"
+
+3212 - 3212
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3212.param"
+
+3213 - 3213
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3213.param"
+
+3214 - 3214
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3214.param"
+
+3215 - 3215
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3215.param"
+
+3216 - 3216
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3216.param"
+
+3217 - 3217
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3217.param"
+
+3218 - 3218
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3218.param"
+
+3219 - 3219
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3219.param"
+
+3220 - 3220
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3220.param"
+
+3221 - 3221
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3221.param"
+
+3222 - 3222
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3222.param"
+
+3223 - 3223
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3223.param"
+
+3224 - 3224
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3224.param"
+
+3225 - 3225
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3225.param"
+
+3226 - 3226
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3226.param"
+
+3227 - 3227
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3227.param"
+
+3228 - 3228
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3228.param"
+
+3229 - 3229
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3229.param"
+
+3230 - 3230
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3230.param"
+
+3231 - 3231
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3231.param"
+
+3232 - 3232
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3232.param"
+
+3233 - 3233
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3233.param"
+
+3234 - 3234
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3234.param"
+
+3235 - 3235
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3235.param"
+
+3236 - 3236
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3236.param"
+
+3237 - 3237
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3237.param"
+
+3238 - 3238
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3238.param"
+
+3239 - 3239
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3239.param"
+
+3240 - 3240
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3240.param"
+
+3241 - 3241
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3241.param"
+
+3242 - 3242
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3242.param"
+
+3243 - 3243
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3243.param"
+
+3244 - 3244
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3244.param"
+
+3246 - 3246
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3246.param"
+
+3247 - 3247
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3247.param"
+
+3248 - 3248
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3248.param"
+
+3249 - 3249
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3249.param"
+
+3250 - 3250
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3250.param"
+
+3251 - 3251
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3251.param"
+
+3252 - 3252
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3252.param"
+
+3253 - 3253
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3253.param"
+
+3255 - 3255
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3255.param"
+
+3256 - 3256
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3256.param"
+
+3257 - 3257
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3257.param"
+
+3258 - 3258
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3258.param"
+
+3259 - 3259
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3259.param"
+
+3260 - 3260
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3260.param"
+
+3261 - 3261
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3261.param"
+
+3262 - 3262
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3262.param"
+
+3263 - 3263
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3263.param"
+
+3264 - 3264
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3264.param"
+
+3265 - 3265
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3265.param"
+
+3266 - 3266
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3266.param"
+
+3267 - 3267
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3267.param"
+
+3268 - 3268
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3268.param"
+
+3269 - 3269
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3269.param"
+
+3270 - 3270
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3270.param"
+
+3271 - 3271
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3271.param"
+
+3272 - 3272
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3272.param"
+
+3273 - 3273
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3273.param"
+
+3274 - 3274
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3274.param"
+
+3275 - 3275
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3275.param"
+
+3276 - 3276
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3276.param"
+
+3277 - 3277
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3277.param"
+
+3278 - 3278
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3278.param"
+
+3279 - 3279
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3279.param"
+
+3280 - 3280
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3280.param"
+
+3281 - 3281
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3281.param"
+
+3282 - 3282
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3282.param"
+
+3283 - 3283
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3283.param"
+
+3284 - 3284
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3284.param"
+
+3285 - 3285
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3285.param"
+
+3286 - 3286
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3286.param"
+
+3287 - 3287
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3287.param"
+
+3288 - 3288
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3288.param"
+
+3289 - 3289
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3289.param"
+
+3290 - 3290
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3290.param"
+
+3291 - 3291
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3291.param"
+
+3292 - 3292
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3292.param"
+
+3293 - 3293
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3293.param"
+
+3294 - 3294
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3294.param"
+
+3295 - 3295
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3295.param"
+
+3296 - 3296
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3296.param"
+
+3297 - 3297
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3297.param"
+
+3298 - 3298
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3298.param"
+
+3299 - 3299
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3299.param"
+
+3300 - 3300
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3300.param"
+
+3301 - 3301
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3301.param"
+
+3302 - 3302
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3302.param"
+
+3303 - 3303
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3303.param"
+
+3304 - 3304
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3304.param"
+
+3305 - 3305
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3305.param"
+
+3306 - 3306
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3306.param"
+
+3307 - 3307
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3307.param"
+
+3308 - 3308
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3308.param"
+
+3309 - 3309
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3309.param"
+
+3310 - 3310
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3310.param"
+
+3311 - 3311
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3311.param"
+
+3312 - 3312
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3312.param"
+
+3313 - 3313
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3313.param"
+
+3314 - 3314
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3314.param"
+
+3315 - 3315
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3315.param"
+
+3316 - 3316
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3316.param"
+
+3317 - 3317
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3317.param"
+
+3318 - 3318
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3318.param"
+
+3319 - 3319
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3319.param"
+
+3320 - 3320
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3320.param"
+
+3321 - 3321
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3321.param"
+
+3322 - 3322
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3322.param"
+
+3323 - 3323
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3323.param"
+
+3324 - 3324
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3324.param"
+
+3325 - 3325
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3325.param"
+
+3326 - 3326
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3326.param"
+
+3327 - 3327
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3327.param"
+
+3328 - 3328
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3328.param"
+
+3329 - 3329
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3329.param"
+
+3330 - 3330
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3330.param"
+
+3331 - 3331
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3331.param"
+
+3332 - 3332
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3332.param"
+
+3333 - 3333
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3333.param"
+
+3334 - 3334
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3334.param"
+
+3335 - 3335
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3335.param"
+
+3336 - 3336
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3336.param"
+
+3337 - 3337
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3337.param"
+
+3338 - 3338
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3338.param"
+
+3339 - 3339
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3339.param"
+
+3340 - 3340
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3340.param"
+
+3341 - 3341
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3341.param"
+
+3342 - 3342
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3342.param"
+
+3343 - 3343
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3343.param"
+
+3345 - 3345
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3345.param"
+
+3346 - 3346
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3346.param"
+
+3347 - 3347
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3347.param"
+
+3349 - 3349
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3349.param"
+
+3350 - 3350
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3350.param"
+
+3351 - 3351
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3351.param"
+
+3352 - 3352
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3352.param"
+
+3353 - 3353
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3353.param"
+
+3354 - 3354
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3354.param"
+
+3728 - 3728
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3728.param"
+
+3729 - 3729
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3729.param"
+
+3730 - 3730
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3730.param"
+
+3731 - 3731
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3731.param"
+
+3732 - 3732
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3732.param"
+
+3733 - 3733
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3733.param"
+
+3734 - 3734
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3734.param"
+
+3735 - 3735
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3735.param"
+
+3736 - 3736
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3736.param"
+
+3737 - 3737
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3737.param"
+
+3738 - 3738
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3738.param"
+
+3739 - 3739
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3739.param"
+
+3740 - 3740
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3740.param"
+
+3741 - 3741
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3741.param"
+
+3742 - 3742
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3742.param"
+
+3743 - 3743
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3743.param"
+
+3744 - 3744
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3744.param"
+
+3745 - 3745
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3745.param"
+
+3746 - 3746
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3746.param"
+
+3747 - 3747
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3747.param"
+
+3748 - 3748
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3748.param"
+
+3749 - 3749
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3749.param"
+
+3750 - 3750
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3750.param"
+
+3751 - 3751
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3751.param"
+
+3752 - 3752
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3752.param"
+
+3753 - 3753
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3753.param"
+
+3754 - 3754
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3754.param"
+
+3755 - 3755
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3755.param"
+
+3756 - 3756
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3756.param"
+
+3757 - 3757
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3757.param"
+
+3758 - 3758
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3758.param"
+
+3759 - 3759
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3759.param"
+
+3760 - 3760
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3760.param"
+
+3761 - 3761
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3761.param"
+
+3762 - 3762
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3762.param"
+
+3763 - 3763
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3763.param"
+
+3764 - 3764
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3764.param"
+
+3765 - 3765
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3765.param"
+
+3766 - 3766
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3766.param"
+
+3767 - 3767
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3767.param"
+
+3769 - 3769
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3769.param"
+
+3770 - 3770
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3770.param"
+
+3771 - 3771
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3771.param"
+
+3772 - 3772
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3772.param"
+
+3773 - 3773
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3773.param"
+
+3774 - 3774
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3774.param"
+
+3775 - 3775
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3775.param"
+
+3776 - 3776
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3776.param"
+
+3777 - 3777
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3777.param"
+
+3778 - 3778
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3778.param"
+
+3779 - 3779
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3779.param"
+
+3780 - 3780
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3780.param"
+
+3781 - 3781
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3781.param"
+
+3782 - 3782
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3782.param"
+
+3783 - 3783
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3783.param"
+
+3784 - 3784
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3784.param"
+
+3785 - 3785
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3785.param"
+
+3786 - 3786
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3786.param"
+
+3787 - 3787
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3787.param"
+
+3788 - 3788
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3788.param"
+
+3789 - 3789
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3789.param"
+
+3790 - 3790
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3790.param"
+
+3791 - 3791
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3791.param"
+
+3792 - 3792
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3792.param"
+
+3793 - 3793
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3793.param"
+
+3794 - 3794
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3794.param"
+
+3795 - 3795
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3795.param"
+
+3796 - 3796
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3796.param"
+
+3797 - 3797
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3797.param"
+
+3798 - 3798
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3798.param"
+
+3799 - 3799
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3799.param"
+
+3800 - 3800
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3800.param"
+
+3801 - 3801
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3801.param"
+
+3802 - 3802
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3802.param"
+
+3803 - 3803
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3803.param"
+
+3804 - 3804
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3804.param"
+
+3805 - 3805
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3805.param"
+
+3806 - 3806
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3806.param"
+
+3807 - 3807
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3807.param"
+
+3808 - 3808
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3808.param"
+
+3809 - 3809
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3809.param"
+
+3810 - 3810
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3810.param"
+
+3811 - 3811
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3811.param"
+
+3812 - 3812
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3812.param"
+
+3813 - 3813
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3813.param"
+
+3814 - 3814
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3814.param"
+
+3815 - 3815
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3815.param"
+
+3816 - 3816
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3816.param"
+
+3817 - 3817
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3817.param"
+
+3818 - 3818
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3818.param"
+
+3819 - 3819
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3819.param"
+
+3820 - 3820
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3820.param"
+
+3821 - 3821
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3821.param"
+
+3822 - 3822
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3822.param"
+
+3823 - 3823
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3823.param"
+
+3824 - 3824
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3824.param"
+
+3825 - 3825
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3825.param"
+
+3826 - 3826
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3826.param"
+
+3827 - 3827
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3827.param"
+
+3828 - 3828
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3828.param"
+
+3829 - 3829
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3829.param"
+
+3830 - 3830
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3830.param"
+
+3831 - 3831
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3831.param"
+
+3832 - 3832
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3832.param"
+
+3834 - 3834
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3834.param"
+
+3835 - 3835
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3835.param"
+
+3836 - 3836
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3836.param"
+
+3837 - 3837
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3837.param"
+
+3838 - 3838
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3838.param"
+
+3839 - 3839
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3839.param"
+
+3840 - 3840
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3840.param"
+
+3841 - 3841
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3841.param"
+
+3842 - 3842
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3842.param"
+
+3843 - 3843
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3843.param"
+
+3844 - 3844
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3844.param"
+
+3845 - 3845
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3845.param"
+
+3846 - 3846
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3846.param"
+
+3848 - 3848
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3848.param"
+
+3849 - 3849
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3849.param"
+
+3850 - 3850
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3850.param"
+
+3851 - 3851
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3851.param"
+
+3852 - 3852
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3852.param"
+
+3853 - 3853
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3853.param"
+
+3854 - 3854
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3854.param"
+
+3855 - 3855
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3855.param"
+
+3856 - 3856
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3856.param"
+
+3857 - 3857
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3857.param"
+
+3858 - 3858
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3858.param"
+
+3859 - 3859
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3859.param"
+
+3860 - 3860
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3860.param"
+
+3861 - 3861
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3861.param"
+
+3862 - 3862
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3862.param"
+
+3863 - 3863
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3863.param"
+
+3864 - 3864
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3864.param"
+
+3865 - 3865
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3865.param"
+
+3866 - 3866
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3866.param"
+
+3867 - 3867
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3867.param"
+
+3868 - 3868
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3868.param"
+
+3869 - 3869
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3869.param"
+
+3870 - 3870
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3870.param"
+
+3871 - 3871
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3871.param"
+
+3872 - 3872
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3872.param"
+
+3873 - 3873
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3873.param"
+
+3874 - 3874
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3874.param"
+
+3875 - 3875
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3875.param"
+
+3876 - 3876
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3876.param"
+
+3877 - 3877
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3877.param"
+
+3878 - 3878
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3878.param"
+
+3879 - 3879
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3879.param"
+
+3881 - 3881
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3881.param"
+
+3882 - 3882
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3882.param"
+
+3900 - 3900
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3900.param"
+
+3901 - 3901
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3901.param"
+
+3902 - 3902
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3902.param"
+
+3903 - 3903
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3903.param"
+
+3904 - 3904
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3904.param"
+
+3906 - 3906
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3906.param"
+
+3909 - 3909
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3909.param"
+
+3910 - 3910
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3910.param"
+
+3911 - 3911
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3911.param"
+
+3912 - 3912
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3912.param"
+
+3913 - 3913
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3913.param"
+
+3914 - 3914
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3914.param"
+
+3915 - 3915
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3915.param"
+
+3916 - 3916
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3916.param"
+
+3917 - 3917
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3917.param"
+
+3918 - 3918
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3918.param"
+
+3919 - 3919
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3919.param"
+
+3920 - 3920
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3920.param"
+
+3921 - 3921
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3921.param"
+
+3922 - 3922
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3922.param"
+
+3923 - 3923
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3923.param"
+
+3924 - 3924
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3924.param"
+
+3925 - 3925
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3925.param"
+
+3926 - 3926
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3926.param"
+
+3927 - 3927
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3927.param"
+
+3928 - 3928
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3928.param"
+
+3929 - 3929
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3929.param"
+
+3930 - 3930
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3930.param"
+
+3931 - 3931
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3931.param"
+
+3932 - 3932
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3932.param"
+
+3935 - 3935
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3935.param"
+
+3936 - 3936
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3936.param"
+
+3937 - 3937
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3937.param"
+
+3938 - 3938
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3938.param"
+
+3939 - 3939
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3939.param"
+
+3940 - 3940
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3940.param"
+
+3941 - 3941
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3941.param"
+
+3942 - 3942
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3942.param"
+
+3943 - 3943
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3943.param"
+
+3944 - 3944
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3944.param"
+
+3945 - 3945
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3945.param"
+
+3946 - 3946
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3946.param"
+
+3947 - 3947
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3947.param"
+
+3948 - 3948
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3948.param"
+
+3949 - 3949
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3949.param"
+
+3950 - 3950
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3950.param"
+
+3951 - 3951
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3951.param"
+
+3952 - 3952
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3952.param"
+
+3953 - 3953
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3953.param"
+
+3954 - 3954
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3954.param"
+
+3955 - 3955
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3955.param"
+
+3956 - 3956
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3956.param"
+
+3957 - 3957
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3957.param"
+
+3958 - 3958
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3958.param"
+
+3959 - 3959
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3959.param"
+
+3960 - 3960
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3960.param"
+
+3961 - 3961
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3961.param"
+
+3962 - 3962
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3962.param"
+
+3963 - 3963
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3963.param"
+
+3964 - 3964
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3964.param"
+
+3965 - 3965
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3965.param"
+
+3966 - 3966
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3966.param"
+
+3967 - 3967
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3967.param"
+
+3968 - 3968
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3968.param"
+
+3969 - 3969
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3969.param"
+
+3970 - 3970
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3970.param"
+
+3971 - 3971
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3971.param"
+
+3972 - 3972
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3972.param"
+
+3973 - 3973
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3973.param"
+
+3974 - 3974
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3974.param"
+
+3976 - 3976
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3976.param"
+
+3977 - 3977
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3977.param"
+
+3978 - 3978
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3978.param"
+
+3979 - 3979
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3979.param"
+
+3980 - 3980
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3980.param"
+
+3981 - 3981
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3981.param"
+
+3982 - 3982
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3982.param"
+
+3983 - 3983
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3983.param"
+
+3984 - 3984
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3984.param"
+
+3985 - 3985
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3985.param"
+
+3986 - 3986
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3986.param"
+
+3987 - 3987
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3987.param"
+
+3988 - 3988
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_3988.param"
+
+4076 - 4076
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4076.param"
+
+4077 - 4077
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4077.param"
+
+4078 - 4078
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4078.param"
+
+4079 - 4079
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4079.param"
+
+4080 - 4080
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4080.param"
+
+4081 - 4081
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4081.param"
+
+4082 - 4082
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4082.param"
+
+4083 - 4083
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4083.param"
+
+4084 - 4084
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4084.param"
+
+4085 - 4085
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4085.param"
+
+4088 - 4088
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4088.param"
+
+4089 - 4089
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4089.param"
+
+4090 - 4090
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4090.param"
+
+4091 - 4091
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4091.param"
+
+4092 - 4092
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4092.param"
+
+4093 - 4093
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4093.param"
+
+4094 - 4094
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4094.param"
+
+4095 - 4095
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4095.param"
+
+4101 - 4101
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4101.param"
+
+4102 - 4102
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4102.param"
+
+4103 - 4103
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4103.param"
+
+4104 - 4104
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4104.param"
+
+4105 - 4105
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4105.param"
+
+4127 - 4127
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4127.param"
+
+4128 - 4128
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4128.param"
+
+4129 - 4129
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4129.param"
+
+4130 - 4130
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4130.param"
+
+4131 - 4131
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4131.param"
+
+4132 - 4132
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4132.param"
+
+4133 - 4133
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4133.param"
+
+4134 - 4134
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4134.param"
+
+4135 - 4135
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4135.param"
+
+4136 - 4136
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4136.param"
+
+4137 - 4137
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4137.param"
+
+4138 - 4138
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4138.param"
+
+4139 - 4139
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4139.param"
+
+4140 - 4140
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4140.param"
+
+4141 - 4141
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4141.param"
+
+4142 - 4142
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4142.param"
+
+4143 - 4143
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4143.param"
+
+4144 - 4144
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4144.param"
+
+4145 - 4145
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4145.param"
+
+4163 - 4163
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4163.param"
+
+4164 - 4164
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4164.param"
+
+4165 - 4165
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4165.param"
+
+4166 - 4166
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4166.param"
+
+4167 - 4167
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4167.param"
+
+4168 - 4168
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4168.param"
+
+4169 - 4169
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4169.param"
+
+4170 - 4170
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4170.param"
+
+4171 - 4171
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4171.param"
+
+4172 - 4172
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4172.param"
+
+4173 - 4173
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4173.param"
+
+4174 - 4174
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4174.param"
+
+4175 - 4175
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4175.param"
+
+4176 - 4176
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4176.param"
+
+4177 - 4177
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4177.param"
+
+4178 - 4178
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4178.param"
+
+4179 - 4179
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4179.param"
+
+4180 - 4180
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4180.param"
+
+4181 - 4181
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4181.param"
+
+4203 - 4203
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4203.param"
+
+4204 - 4204
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4204.param"
+
+4205 - 4205
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4205.param"
+
+4206 - 4206
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4206.param"
+
+4207 - 4207
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4207.param"
+
+4208 - 4208
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4208.param"
+
+4209 - 4209
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4209.param"
+
+4210 - 4210
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4210.param"
+
+4211 - 4211
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4211.param"
+
+4212 - 4212
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4212.param"
+
+4213 - 4213
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4213.param"
+
+4215 - 4215
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4215.param"
+
+4253 - 4253
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4253.param"
+
+4254 - 4254
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4254.param"
+
+4255 - 4255
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4255.param"
+
+4256 - 4256
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4256.param"
+
+4257 - 4257
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4257.param"
+
+4258 - 4258
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4258.param"
+
+4259 - 4259
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4259.param"
+
+4260 - 4260
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4260.param"
+
+4261 - 4261
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4261.param"
+
+4262 - 4262
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4262.param"
+
+4263 - 4263
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4263.param"
+
+4264 - 4264
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4264.param"
+
+4265 - 4265
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4265.param"
+
+4266 - 4266
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4266.param"
+
+4267 - 4267
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4267.param"
+
+4268 - 4268
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4268.param"
+
+4269 - 4269
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4269.param"
+
+4270 - 4270
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4270.param"
+
+4300 - 4300
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4300.param"
+
+4301 - 4301
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4301.param"
+
+4302 - 4302
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4302.param"
+
+4303 - 4303
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4303.param"
+
+4304 - 4304
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4304.param"
+
+4305 - 4305
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4305.param"
+
+4306 - 4306
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4306.param"
+
+4307 - 4307
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4307.param"
+
+4308 - 4308
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4308.param"
+
+4309 - 4309
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4309.param"
+
+4310 - 4310
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4310.param"
+
+4311 - 4311
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4311.param"
+
+4312 - 4312
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4312.param"
+
+4313 - 4313
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4313.param"
+
+4314 - 4314
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4314.param"
+
+4315 - 4315
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4315.param"
+
+4316 - 4316
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4316.param"
+
+4317 - 4317
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4317.param"
+
+4318 - 4318
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4318.param"
+
+4319 - 4319
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4319.param"
+
+4320 - 4320
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4320.param"
+
+4321 - 4321
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4321.param"
+
+4323 - 4323
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4323.param"
+
+4324 - 4324
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4324.param"
+
+4349 - 4349
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4349.param"
+
+4350 - 4350
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4350.param"
+
+4351 - 4351
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4351.param"
+
+4352 - 4352
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4352.param"
+
+4353 - 4353
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4353.param"
+
+4354 - 4354
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4354.param"
+
+4355 - 4355
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4355.param"
+
+4356 - 4356
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4356.param"
+
+4357 - 4357
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4357.param"
+
+4358 - 4358
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4358.param"
+
+4359 - 4359
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4359.param"
+
+4360 - 4360
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4360.param"
+
+4361 - 4361
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4361.param"
+
+4362 - 4362
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4362.param"
+
+4363 - 4363
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4363.param"
+
+4364 - 4364
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4364.param"
+
+4365 - 4365
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4365.param"
+
+4366 - 4366
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4366.param"
+
+4367 - 4367
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4367.param"
+
+4368 - 4368
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4368.param"
+
+4369 - 4369
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4369.param"
+
+4370 - 4370
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4370.param"
+
+4371 - 4371
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4371.param"
+
+4372 - 4372
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4372.param"
+
+4397 - 4397
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4397.param"
+
+4398 - 4398
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4398.param"
+
+4399 - 4399
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4399.param"
+
+4400 - 4400
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4400.param"
+
+4401 - 4401
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4401.param"
+
+4402 - 4402
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4402.param"
+
+4403 - 4403
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4403.param"
+
+4404 - 4404
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4404.param"
+
+4405 - 4405
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4405.param"
+
+4406 - 4406
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4406.param"
+
+4407 - 4407
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4407.param"
+
+4408 - 4408
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4408.param"
+
+4409 - 4409
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4409.param"
+
+4410 - 4410
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4410.param"
+
+4411 - 4411
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4411.param"
+
+4414 - 4414
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4414.param"
+
+4415 - 4415
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4415.param"
+
+4417 - 4417
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4417.param"
+
+4418 - 4418
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4418.param"
+
+4419 - 4419
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4419.param"
+
+4420 - 4420
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4420.param"
+
+4422 - 4422
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4422.param"
+
+4483 - 4483
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4483.param"
+
+4484 - 4484
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4484.param"
+
+4485 - 4485
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4485.param"
+
+4486 - 4486
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4486.param"
+
+4487 - 4487
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4487.param"
+
+4488 - 4488
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4488.param"
+
+4489 - 4489
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4489.param"
+
+4490 - 4490
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4490.param"
+
+4491 - 4491
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4491.param"
+
+4492 - 4492
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4492.param"
+
+4493 - 4493
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4493.param"
+
+4494 - 4494
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4494.param"
+
+4495 - 4495
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4495.param"
+
+4496 - 4496
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4496.param"
+
+4497 - 4497
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4497.param"
+
+4498 - 4498
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4498.param"
+
+4499 - 4499
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4499.param"
+
+4500 - 4500
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4500.param"
+
+4501 - 4501
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4501.param"
+
+4502 - 4502
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4502.param"
+
+4503 - 4503
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4503.param"
+
+4504 - 4504
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4504.param"
+
+4505 - 4505
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4505.param"
+
+4506 - 4506
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4506.param"
+
+4507 - 4507
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4507.param"
+
+4508 - 4508
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4508.param"
+
+4509 - 4509
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4509.param"
+
+4551 - 4551
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4551.param"
+
+4552 - 4552
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4552.param"
+
+4555 - 4555
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4555.param"
+
+4556 - 4556
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4556.param"
+
+4557 - 4557
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4557.param"
+
+4558 - 4558
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4558.param"
+
+4559 - 4559
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4559.param"
+
+4560 - 4560
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4560.param"
+
+4561 - 4561
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4561.param"
+
+4562 - 4562
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4562.param"
+
+4563 - 4563
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4563.param"
+
+4564 - 4564
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4564.param"
+
+4565 - 4565
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4565.param"
+
+4566 - 4566
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4566.param"
+
+4568 - 4568
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_4568.param"
+
+6874 - 6874
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6874.param"
+
+6875 - 6875
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6875.param"
+
+6876 - 6876
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6876.param"
+
+6877 - 6877
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6877.param"
+
+6878 - 6878
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6878.param"
+
+6879 - 6879
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6879.param"
+
+6880 - 6880
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6880.param"
+
+6931 - 6931
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6931.param"
+
+6932 - 6932
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6932.param"
+
+6933 - 6933
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6933.param"
+
+6934 - 6934
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6934.param"
+
+6935 - 6935
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6935.param"
+
+6936 - 6936
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6936.param"
+
+6937 - 6937
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6937.param"
+
+6938 - 6938
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6938.param"
+
+6939 - 6939
+g_ctp_det_calib_filename   = "DBASE/HMS/det_calib_6939.param"
