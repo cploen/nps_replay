@@ -18,6 +18,8 @@ module use /group/nps/modulefiles
 module load nps_replay/5.28.24
 
 cd /u/group/nps/cploen/nps_replay
+echo "Git branch: $(git branch --show-current)"
+echo "Git commit: $(git log -1 --oneline)"
 
 source setup.sh
 
