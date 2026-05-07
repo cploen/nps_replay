@@ -11,7 +11,7 @@
 gNumBCMs    = 6
 gBCM_Names  = " BCM1      BCM2      Unser	BCM4A    BCM4B   BCM4C"
 gBCM_Gain =            5741.,     5707.,     400.6,      9597.,    43080.,    1546.
-gBCM_Offset =           1108.,   250000.,  359700.,      177.3.,   -8962.,     163.6
+gBCM_Offset =           1108.,   250000.,  359700.,      177.3,   -8962.,     163.6
 gBCM_SatOffset =         50.,       50.,    1000.,       1000.,     1000.,    1000. 
 gBCM_SatQuadratic =  0.00175,     0.002,       0.,       0.,     0.0,    0.0 
 
