@@ -13762,7 +13762,7 @@ NPS_target_distance = 957
 1251
 gpbeam = 10.54330237
 gtargmass_amu = 1.00794
-htheta_lab = -20.7
+htheta_lab = -20.700
 hpcentral = 6.117
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13773,7 +13773,7 @@ NPS_target_distance = 957
 1252
 gpbeam = 10.54346881
 gtargmass_amu = 1.00794
-htheta_lab = -20.7
+htheta_lab = -20.700
 hpcentral = 6.117
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13850,7 +13850,7 @@ NPS_target_distance = 957
 1259
 gpbeam = 10.54360473
 gtargmass_amu = 1.00794
-htheta_lab = -22.12
+htheta_lab = -22.120
 hpcentral = 6.117
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13883,7 +13883,7 @@ NPS_target_distance = 957
 1262
 gpbeam = 10.54348368
 gtargmass_amu = 12.0107
-htheta_lab = -12.37
+htheta_lab = -12.385
 hpcentral = 5.639
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13894,7 +13894,7 @@ NPS_target_distance = 957
 1263
 gpbeam = 10.54349414
 gtargmass_amu = 12.0107
-htheta_lab = -12.37
+htheta_lab = -12.385
 hpcentral = 5.639
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13905,7 +13905,7 @@ NPS_target_distance = 957
 1264
 gpbeam = 10.54354602
 gtargmass_amu = 12.0107
-htheta_lab = -12.37
+htheta_lab = -12.385
 hpcentral = 5.639
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13916,7 +13916,7 @@ NPS_target_distance = 957
 1265
 gpbeam = 10.54351864
 gtargmass_amu = 12.0107
-htheta_lab = -12.37
+htheta_lab = -12.385
 hpcentral = 5.639
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13927,7 +13927,7 @@ NPS_target_distance = 957
 1266
 gpbeam = 10.54332802
 gtargmass_amu = 1.00794
-htheta_lab = -12.37
+htheta_lab = -12.385
 hpcentral = 5.639
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13938,7 +13938,7 @@ NPS_target_distance = 957
 1267
 gpbeam = 10.54335729
 gtargmass_amu = 1.00794
-htheta_lab = -12.37
+htheta_lab = -21.270
 hpcentral = 5.639
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13949,7 +13949,7 @@ NPS_target_distance = 957
 1268
 gpbeam = 10.54332902
 gtargmass_amu = 1.00794
-htheta_lab = -22.7
+htheta_lab = -22.705
 hpcentral = 5.639
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -13960,7 +13960,7 @@ NPS_target_distance = 957
 1269
 gpbeam = 10.54333496
 gtargmass_amu = 1.00794
-htheta_lab = -24.3
+htheta_lab = -24.310
 hpcentral = 5.639
 stheta_lab = 37.3
 nps_theta_offset = -16.3068
@@ -16963,7 +16963,7 @@ NPS_target_distance = 957
 1536
 gpbeam = 10.54363166
 gtargmass_amu = 1.00794
-htheta_lab = -16.85
+htheta_lab = -16.850
 hpcentral = 6.667
 stheta_lab = 36.88
 nps_theta_offset = -16.3068
@@ -16974,7 +16974,7 @@ NPS_target_distance = 957
 1537
 gpbeam = 10.54374322
 gtargmass_amu = 12.0107
-htheta_lab = -12.49
+htheta_lab = -12.490
 hpcentral = 6.667
 stheta_lab = 36.88
 nps_theta_offset = -16.3068
@@ -16985,7 +16985,7 @@ NPS_target_distance = 957
 1538
 gpbeam = 10.54331308
 gtargmass_amu = 12.0107
-htheta_lab = -12.49
+htheta_lab = -12.490
 hpcentral = 6.667
 stheta_lab = 36.88
 nps_theta_offset = -16.3068
@@ -16996,7 +16996,7 @@ NPS_target_distance = 957
 1539
 gpbeam = 10.54361940
 gtargmass_amu = 12.0107
-htheta_lab = -12.49
+htheta_lab = -12.490
 hpcentral = 6.667
 stheta_lab = 36.88
 nps_theta_offset = -16.3068
@@ -17007,7 +17007,7 @@ NPS_target_distance = 957
 1540
 gpbeam = 10.54380481
 gtargmass_amu = 12.0107
-htheta_lab = -12.49
+htheta_lab = -12.490
 hpcentral = 6.667
 stheta_lab = 36.88
 nps_theta_offset = -16.3068
@@ -17018,7 +17018,7 @@ NPS_target_distance = 957
 1541
 gpbeam = 10.539
 gtargmass_amu = 12.0107
-htheta_lab = -12.49
+htheta_lab = -12.490
 hpcentral = 6.667
 stheta_lab = 36.88
 nps_theta_offset = -16.3068
@@ -17029,7 +17029,7 @@ NPS_target_distance = 957
 1542
 gpbeam = 10.539
 gtargmass_amu = 12.0107
-htheta_lab = -12.49
+htheta_lab = -12.490
 hpcentral = 6.667
 stheta_lab = 36.88
 nps_theta_offset = -16.3068
@@ -17040,7 +17040,7 @@ NPS_target_distance = 957
 1543
 gpbeam = 10.54379325
 gtargmass_amu = 12.0107
-htheta_lab = -12.49
+htheta_lab = -12.490
 hpcentral = 6.667
 stheta_lab = 36.88
 nps_theta_offset = -16.3068
@@ -17051,7 +17051,7 @@ NPS_target_distance = 957
 1544
 gpbeam = 10.54386042
 gtargmass_amu = 12.0107
-htheta_lab = -12.49
+htheta_lab = -12.490
 hpcentral = 6.667
 stheta_lab = 36.88
 nps_theta_offset = -16.3068
@@ -18855,7 +18855,7 @@ NPS_target_distance = -999999
 1711
 gpbeam = 10.54374910
 gtargmass_amu = 12.0107
-htheta_lab = -16.5
+htheta_lab = -16.500
 hpcentral = 5.878
 stheta_lab = 35.005
 nps_theta_offset = -16.3068
@@ -18866,7 +18866,7 @@ NPS_target_distance = 307
 1712
 gpbeam = 10.54387811
 gtargmass_amu = 12.0107
-htheta_lab = -16.5
+htheta_lab = -16.500
 hpcentral = 5.878
 stheta_lab = 35.005
 nps_theta_offset = -16.3068
@@ -18877,7 +18877,7 @@ NPS_target_distance = 307
 1713
 gpbeam = 10.54396346
 gtargmass_amu = 12.0107
-htheta_lab = -16.5
+htheta_lab = -16.500
 hpcentral = 5.878
 stheta_lab = 35.005
 nps_theta_offset = -16.3068
@@ -18888,7 +18888,7 @@ NPS_target_distance = 307
 1714
 gpbeam = 10.54402191
 gtargmass_amu = 1.007825032
-htheta_lab = -22.83
+htheta_lab = -22.835
 hpcentral = 5.878
 stheta_lab = 35.005
 nps_theta_offset = -16.3068
@@ -18899,7 +18899,7 @@ NPS_target_distance = 307
 1715
 gpbeam = 10.54403352
 gtargmass_amu = 1.007825032
-htheta_lab = -21.68
+htheta_lab = -21.685
 hpcentral = 5.878
 stheta_lab = 35.005
 nps_theta_offset = -16.3068
@@ -18910,7 +18910,7 @@ NPS_target_distance = 307
 1716
 gpbeam = 10.54398154
 gtargmass_amu = 1.007825032
-htheta_lab = -21.68
+htheta_lab = -20.545
 hpcentral = 5.878
 stheta_lab = 35.005
 nps_theta_offset = -16.3068
@@ -55669,7 +55669,7 @@ NPS_target_distance = 407
 5156
 gpbeam = 10.54256582
 gtargmass_amu = 12.0107
-htheta_lab = -15.2
+htheta_lab = -15.195
 hpcentral = 6.667
 stheta_lab = 27.5
 nps_theta_offset = -16.3
@@ -55680,7 +55680,7 @@ NPS_target_distance = 407
 5157
 gpbeam = 10.54243736
 gtargmass_amu = 12.0107
-htheta_lab = -15.2
+htheta_lab = -15.195
 hpcentral = 6.667
 stheta_lab = 27.5
 nps_theta_offset = -16.3
@@ -55691,7 +55691,7 @@ NPS_target_distance = 407
 5158
 gpbeam = 10.54183936
 gtargmass_amu = 12.0107
-htheta_lab = -15.2
+htheta_lab = -15.195
 hpcentral = 6.667
 stheta_lab = 27.5
 nps_theta_offset = -16.3
@@ -55702,7 +55702,7 @@ NPS_target_distance = 407
 5159
 gpbeam = 10.54172529
 gtargmass_amu = 12.0107
-htheta_lab = -15.2
+htheta_lab = -15.195
 hpcentral = 6.667
 stheta_lab = 27.5
 nps_theta_offset = -16.3
@@ -55713,7 +55713,7 @@ NPS_target_distance = 407
 5160
 gpbeam = 10.54215435
 gtargmass_amu = 12.0107
-htheta_lab = -15.2
+htheta_lab = -15.195
 hpcentral = 6.667
 stheta_lab = 27.5
 nps_theta_offset = -16.3
@@ -55724,7 +55724,7 @@ NPS_target_distance = 407
 5161
 gpbeam = 10.54255522
 gtargmass_amu = 12.0107
-htheta_lab = -15.2
+htheta_lab = -15.195
 hpcentral = 6.667
 stheta_lab = 27.5
 nps_theta_offset = -16.3
@@ -55735,7 +55735,7 @@ NPS_target_distance = 407
 5162
 gpbeam = 10.54263836
 gtargmass_amu = 12.0107
-htheta_lab = -15.2
+htheta_lab = -15.195
 hpcentral = 6.667
 stheta_lab = 27.5
 nps_theta_offset = -16.3
@@ -55746,7 +55746,7 @@ NPS_target_distance = 407
 5163
 gpbeam = 10.54257435
 gtargmass_amu = 12.0107
-htheta_lab = -15.2
+htheta_lab = -15.195
 hpcentral = 6.667
 stheta_lab = 27.5
 nps_theta_offset = -16.3
@@ -55757,7 +55757,7 @@ NPS_target_distance = 407
 5164
 gpbeam = 10.54258701
 gtargmass_amu = 12.0107
-htheta_lab = -15.2
+htheta_lab = -15.195
 hpcentral = 6.667
 stheta_lab = 27.5
 nps_theta_offset = -16.3
