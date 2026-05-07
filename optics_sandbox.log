@@ -4,5 +4,6 @@ Optics angular sandbox log
 
 May 7, 2026:
 -  set zero-order matrix elements to zero.
-
+-  changed output dir to ROOTfiles/OPTICS/angular_sandbox/no_offsets/
+next
 -  rerun high-momentum optics runs and check masks before refitting.
