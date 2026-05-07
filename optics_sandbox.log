@@ -1,0 +1,8 @@
+Optics angular sandbox log
+
+- 5.639 matrix is not finalized.
+
+May 7, 2026:
+-  set zero-order matrix elements to zero.
+
+-  rerun high-momentum optics runs and check masks before refitting.
