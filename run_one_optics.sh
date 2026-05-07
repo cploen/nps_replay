@@ -9,14 +9,22 @@ echo "Host: $(hostname)"
 echo "Time: $(date)"
 echo "PWD: $(pwd)"
 
+
+source /etc/profile.d/modules.sh
+
+module use /apps/modulefiles
+module use /group/halla/modulefiles
+module use /group/nps/modulefiles
+module load nps_replay/5.28.24
+
 cd /u/group/nps/cploen/nps_replay
- 
+
 source setup.sh
 
 OUTDIR="/w/hallc-scshelf2102/nps/cploen/ROOTfiles/OPTICS/angular_sandbox/zero_offsets/"
 mkdir -p "$OUTDIR"
 
-hcana -q "SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.(${RUN}, -1,1,99)"
+hcana -l -b -q 'SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C('"${RUN}"',-1,1,99)'
 
 echo "Finished run ${RUN}"
 echo "Time: $(date)"
