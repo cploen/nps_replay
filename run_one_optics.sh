@@ -26,7 +26,7 @@ source setup.sh
 OUTDIR="/w/hallc-scshelf2102/nps/cploen/ROOTfiles/OPTICS/angular_sandbox/zero_offsets/"
 mkdir -p "$OUTDIR"
 
-hcana -l -b -q 'SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C('"${RUN}"',-1,1,99)'
+hcana -l -b -q 'SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C('"${RUN}"',-1,1,20)'
 
 echo "Finished run ${RUN}"
 echo "Time: $(date)"
