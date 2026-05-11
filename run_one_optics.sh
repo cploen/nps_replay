@@ -3,8 +3,10 @@
 set -euo pipefail
 
 RUN=$1
+MAXSEG="${2:-20}"
 
 echo "Starting optics replay for run ${RUN}"
+echo "Max segment: ${MAXSEG}"
 echo "Host: $(hostname)"
 echo "Time: $(date)"
 echo "PWD: $(pwd)"
@@ -26,7 +28,7 @@ source setup.sh
 OUTDIR="/w/hallc-scshelf2102/nps/cploen/ROOTfiles/OPTICS/angular_sandbox/zero_offsets/"
 mkdir -p "$OUTDIR"
 
-hcana -l -b -q 'SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C('"${RUN}"',-1,1,20)'
+hcana -l -b -q 'SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C('"${RUN}"',-1,1,'"${MAXSEG}"')'
 
 echo "Finished run ${RUN}"
 echo "Time: $(date)"
