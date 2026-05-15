@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+set -euxo pipefail
 
 RUN=$1
 MAXSEG="${2:-20}"
