@@ -33,7 +33,7 @@ void replay_optics_coin_NPS_HMS(int RunNumber=0, int MaxEvent=0, int FirstEvent 
   //  ROOTFileNamePattern = "ROOTfiles/COIN/50k/nps_hms_coin_%d_%d_%d.root";
   //}
   //else{
-    ROOTFileNamePattern = "ROOTfiles/OPTICS/nps_hms_optics_%d_%d_%d.root";
+          ROOTFileNamePattern = "/volatile/hallc/nps/cploen/ROOTfiles/OPTICS/angular_sandbox/newfit_6p667_20260526_1226_and_offsets/rootfiles/nps_hms_optics_%d_%d_%d.root";
   //}
   
   

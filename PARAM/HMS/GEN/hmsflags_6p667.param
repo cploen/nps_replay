@@ -14,8 +14,10 @@
 ;  CMOP matrix elements. If you do change then your hms sieve
 ;  plots will be screwed up.
   hdelta_offset = 0.       ; (%)   hdelta_tar = hdelta_tar + hdelta_offset
-  htheta_offset = 5.84959117e-4  ; (rad) hyp_tar = hyp_tar + htheta_offset
-  hphi_offset   = 7.11802209e-4 ; (rad) hxp_tar = hxp_tar + hphi_offset
+;  htheta_offset = 0.00060540742  ; (rad) hyp_tar = hyp_tar + htheta_offset
+;  hphi_offset   = 0.000680560163 ; (rad) hxp_tar = hxp_tar + hphi_offset
+  htheta_offset = 0.0  ; zero'd for optics optimization
+  hphi_offset   = 0.0 ;
 ;
 
 ;saturation correction flag
