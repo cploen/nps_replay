@@ -11,7 +11,6 @@ echo "Host: $(hostname)"
 echo "Time: $(date)"
 echo "PWD: $(pwd)"
 
-
 source /etc/profile.d/modules.sh
 
 module use /apps/modulefiles
@@ -25,8 +24,7 @@ echo "Git commit: $(git log -1 --oneline)"
 
 source setup.sh
 
-OUTDIR="/w/hallc-scshelf2102/nps/cploen/ROOTfiles/OPTICS/angular_sandbox/zero_offsets/"
-mkdir -p "$OUTDIR"
+mkdir -p /volatile/hallc/nps/cploen/ROOTfiles/OPTICS/angular_sandbox/newfit_6p667_20260526_1226_and_offsets/rootfiles
 
 hcana -l -b -q 'SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C('"${RUN}"',-1,1,'"${MAXSEG}"')'
 
