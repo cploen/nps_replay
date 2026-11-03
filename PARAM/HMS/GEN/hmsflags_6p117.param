@@ -10,12 +10,12 @@
 ; In transport coordinates phi = hyptar = dy/dz and theta = hxptar = dx/dz 
 ;    but for unknown reasons the yp offset is named  htheta_offset
 ;    and  the xp offset is named  hphi_offset
-; Do not to change these values, since these are the zero order
-;  CMOP matrix elements. If you do change then your hms sieve
-;  plots will be screwed up.
+; Final October 29, 2026 angular matrix includes its fitted 00000 terms.
+; Keep external angular offsets zero to avoid adding them twice.
+; htheta_offset adds to yptar; hphi_offset adds to xptar.
   hdelta_offset = 0.       ; (%)   hdelta_tar = hdelta_tar + hdelta_offset
-  htheta_offset = 6.4761385e-4  ; (rad) hyp_tar = hyp_tar + htheta_offset
-  hphi_offset   = 5.81654738e-4 ; (rad) hxp_tar = hxp_tar + hphi_offset
+  htheta_offset = 0.0 ; (rad) hyp_tar; constant included in matrix
+  hphi_offset = 0.0 ; (rad) hxp_tar; constant included in matrix
 ;
 
 ;saturation correction flag
@@ -34,6 +34,4 @@
   hthetacentral_offset = 0.000 ; (rad) 
   h_oopcentral_offset = 0.00  ; (rad)
 ; sets hpcentral = hpcentral * ( 1. + hpcentral_offset / 100. )
-;      htheta_lab=htheta_lab + hthetacentral_offset/degree 
-
-
+;      htheta_lab=htheta_lab + hthetacentral_offset/degree
