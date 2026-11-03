@@ -6,8 +6,13 @@ Every available numeric segment under `/mss/hallc/c-nps/raw` is queued in
 one SWIF2 workflow. All events are replayed (`-1`), with one job per segment.
 
 ```bash
-python3 jobs/submit_elastic_swif.py /absolute/path/elastic_runs.txt --submit
+python3 jobs/submit_elastic_swif.py jobs/elastic_oct29_runs.txt --submit
 ```
+
+`elastic_oct29_runs.txt` contains the 11 runs confirmed by Christine on
+November 3, 2026: 1714–1716 at 5.878 GeV/c; 1250, 1251, 1252, 1253 and 1259
+at 6.117 GeV/c; and 1534–1536 at 6.667 GeV/c. Another one-run-per-line list
+can be supplied as the positional argument.
 
 The worker uses the existing `SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C`
 without changing its physics or output definitions. Each job gets a separate

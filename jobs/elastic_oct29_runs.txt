@@ -1,0 +1,15 @@
+# Elastic runs confirmed by Christine, November 3, 2026.
+# 5.878 GeV/c
+1714
+1715
+1716
+# 6.117 GeV/c
+1250
+1251
+1252
+1253
+1259
+# 6.667 GeV/c
+1534
+1535
+1536
