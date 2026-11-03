@@ -35,12 +35,17 @@ with separate files for each attempt.
 The provenance directory contains the committed replay snapshot (including
 coin kinematics), its commit ID and kinematics checksum, the verified matrix
 checksums, run/setting/segment mapping, raw-file sizes, run list and exact SWIF
-commands. The worker uses the existing `/u/group/nps/cploen/hcswif/setup.sh`;
-its path and checksum are recorded. `--setup` can select another setup script.
+commands. The worker stages `jobs/setup_elastic_farm.sh`, which loads
+`nps_replay/5.28.24`, matching the saved angular-sandbox `run_one_optics.sh`
+from commit `f76e9065922ac5fe59df4311c3d4a30a9f2bca9e`. It then sources the
+snapshot's `setup.sh`. The setup script is copied into the workflow's
+provenance and its checksum is recorded. `--setup` can select another script.
+The missing `/u/group/nps/cploen/hcswif/setup.sh` is not required.
 
-Default resources are one core, 2500 MB RAM and 12 hours per segment, with
-scratch space equal to at least 10 GB or four times the raw segment size,
-plus the staged inputs. `--ram`, `--time`, `--account` and `--partition` can be
+Default resources match the uploaded `swif2_stuff` jobs: `hallc`, `production`,
+`el9`, one core, 3 GB RAM and 24 hours. Scratch space is at least 50 GB or four
+times the raw segment size, plus the staged inputs. `--ram`, `--time`,
+`--account`, `--partition` and `--constraint` can be
 set to the values appropriate to your established farm configuration.
 
 Omit `--submit` to print the complete run/segment plan without creating a

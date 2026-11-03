@@ -93,19 +93,20 @@ def configuration(repo, runs):
 
 
 def main():
+    repo = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('runlist', help='one elastic run number per line')
-    parser.add_argument('--setup', default='/u/group/nps/cploen/hcswif/setup.sh')
+    parser.add_argument('--setup', default=str(repo / 'jobs/setup_elastic_farm.sh'))
     parser.add_argument('--mss', default='/mss/hallc/c-nps/raw')
     parser.add_argument('--output', default='/volatile/hallc/nps/cploen/ROOTfiles/ELASTIC/oct29_beam_search_matrix_embedded_offsets')
     parser.add_argument('--workflow', default='hms_elastic_oct29_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
     parser.add_argument('--account', default='hallc')
     parser.add_argument('--partition', default='production')
-    parser.add_argument('--ram', default='2500M')
-    parser.add_argument('--time', default='12h')
+    parser.add_argument('--constraint', default='el9')
+    parser.add_argument('--ram', default='3GB')
+    parser.add_argument('--time', default='24h')
     parser.add_argument('--submit', action='store_true', help='create, add every segment, and start the complete workflow')
     args = parser.parse_args()
-    repo = Path(__file__).resolve().parents[1]
     runs = run_numbers(args.runlist)
     segments = raw_segments(runs, args.mss)
     settings = configuration(repo, runs)
@@ -140,6 +141,8 @@ def main():
     shutil.copyfile(args.runlist, provenance / 'elastic_runs.txt')
     worker = provenance / 'elastic_swif_worker.sh'
     shutil.copyfile(repo / 'jobs/elastic_swif_worker.sh', worker)
+    farm_setup = provenance / 'elastic_farm_setup.sh'
+    shutil.copyfile(args.setup, farm_setup)
     archive = provenance / 'nps_replay.tar'
     with archive.open('wb') as stream:
         subprocess.run(['git', 'archive', '--format=tar', commit], cwd=repo, stdout=stream, check=True)
@@ -157,16 +160,18 @@ def main():
             (destination / directory).mkdir(parents=True)
         command = ['swif2', 'add-job', args.workflow, '-name', f'elastic_{run}_seg{seg}',
                    '-account', args.account, '-partition', args.partition, '-cores', '1',
+                   '-constraint', args.constraint,
                    '-ram', args.ram, '-time', args.time,
-                   '-disk-scratch', str(max(10_000_000_000, item['bytes'] * 4)),
+                   '-disk-scratch', str(max(50_000_000_000, item['bytes'] * 4)),
                    '-stdout', str(log_dir / '@job_name@-@attempt_id@.out'),
                    '-stderr', str(log_dir / '@job_name@-@attempt_id@.err'),
                    '-input', 'nps_replay.tar.gz', 'file:' + str(archive),
                    '-input', 'elastic_swif_worker.sh', 'file:' + str(worker),
+                   '-input', 'elastic_farm_setup.sh', 'file:' + str(farm_setup),
                    '-input', f'nps_coin_{run}.dat.{seg}', 'mss:' + item['mss'],
                    '-output', 'match:ROOTfiles/OPTICS/*.root', 'file:' + str(destination / 'rootfiles'),
                    '-output', 'match:REPORT_OUTPUT/HMS/*.report', 'file:' + str(destination / 'reports'),
-                   '/bin/bash', 'elastic_swif_worker.sh', str(run), str(seg), str(Path(args.setup).resolve())]
+                   '/bin/bash', 'elastic_swif_worker.sh', str(run), str(seg), './elastic_farm_setup.sh']
         commands.append(command)
     (provenance / 'swif_commands.sh').write_text('\n'.join(' '.join(shlex.quote(x) for x in c) for c in commands) + '\n')
     subprocess.run(['swif2', 'create', args.workflow], check=True)
