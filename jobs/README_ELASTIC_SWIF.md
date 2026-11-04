@@ -1,4 +1,8 @@
-# Elastic replay with the October 29 angular matrices
+# Elastic replay with the constrained YTAR refit
+
+The installed matrices use the saved October 29 beam-selected basis, with
+YTAR's constant fixed at zero and the other adjustable YTAR coefficients
+refitted. XPTAR, YPTAR and momentum coefficients are unchanged.
 
 Use `submit_elastic_swif.py` on ifarm with an explicit text file containing
 one elastic run number per line. Blank lines and `#` comments are allowed.
@@ -24,7 +28,7 @@ The output hierarchy is:
 
 ```text
 /volatile/hallc/nps/cploen/ROOTfiles/ELASTIC/
-  oct29_beam_search_matrix_embedded_offsets/WORKFLOW/
+  oct29_beam_search_matrix_embedded_offsets_ytar0_refit_20261103/WORKFLOW/
     5p878/run_RUN/seg_SEG/rootfiles/*.root
     5p878/run_RUN/seg_SEG/reports/*.report
     6p117/...

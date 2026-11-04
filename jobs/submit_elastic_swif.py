@@ -15,9 +15,9 @@ import subprocess
 import tarfile
 
 MATRICES = {
-    '5p878': 'c04a1138c2f71a06afb81a7ca6dfc57267940f06e5557220efd9b055b7cff7d7',
-    '6p117': '149615a502a8bc1040b179cda4c984f7a113a04c86a5a8fe1f24da2fb543a354',
-    '6p667': '43b5b88bdc70f5c0a7f5f11aec3a5462af52051d52c149a3889fe8ec47dd9c58',
+    '5p878': '855aecc8205a17b8e42d9867f61b2da7c7eb6655b1af8628cb56e3cf82468772',
+    '6p117': '067a0187901d08a00f62171f0d34a9e5932f85c077eabfee55da88a1fda41355',
+    '6p667': 'd60928e0b0ac81347431e30fd5bb6355faed121b2f16d70ee9c90e8fd599b76d',
 }
 
 
@@ -98,8 +98,8 @@ def main():
     parser.add_argument('runlist', help='one elastic run number per line')
     parser.add_argument('--setup', default=str(repo / 'jobs/setup_elastic_farm.sh'))
     parser.add_argument('--mss', default='/mss/hallc/c-nps/raw')
-    parser.add_argument('--output', default='/volatile/hallc/nps/cploen/ROOTfiles/ELASTIC/oct29_beam_search_matrix_embedded_offsets')
-    parser.add_argument('--workflow', default='hms_elastic_oct29_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
+    parser.add_argument('--output', default='/volatile/hallc/nps/cploen/ROOTfiles/ELASTIC/oct29_beam_search_matrix_embedded_offsets_ytar0_refit_20261103')
+    parser.add_argument('--workflow', default='hms_elastic_oct29_ytar0_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
     parser.add_argument('--account', default='hallc')
     parser.add_argument('--partition', default='production')
     parser.add_argument('--constraint', default='el9')
@@ -132,6 +132,10 @@ def main():
     log_dir = Path('/farm_out') / os.environ['USER'] / args.workflow
     log_dir.mkdir(parents=True, exist_ok=True)
     metadata = {'commit': commit, 'matrix_sha256': MATRICES, 'external_angular_offsets': 0,
+                'matrix_source_repository': 'cploen/hallc_spectrometer_angular_optics',
+                'matrix_source_commit': 'd7c8311763adb843698ca8028f24064f9527f64a',
+                'matrix_source_directory': '07_diagnostics/ytar_zero_refit_20261103',
+                'ytar_constant_fixed': 0,
                 'run_settings': settings, 'segments': segments, 'events': -1,
                 'setup_path': str(Path(args.setup).resolve()),
                 'setup_sha256': hashlib.sha256(Path(args.setup).read_bytes()).hexdigest(),
