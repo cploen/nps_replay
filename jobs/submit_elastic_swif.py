@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Submit every MSS segment of an explicit elastic or sieve run list to SWIF2."""
+"""Submit complete elastic or sieve runs to SWIF2, with all raw segments staged."""
 import argparse
 import datetime
 import glob
@@ -55,6 +55,9 @@ def raw_segments(runs, mss):
             raise ValueError(f'No MSS segments found for run {run}')
         if len({f['segment'] for f in found}) != len(found):
             raise ValueError(f'Duplicate segment number for run {run}')
+        available = sorted(f['segment'] for f in found)
+        if available != list(range(available[-1] + 1)):
+            raise ValueError(f'Run {run} requires contiguous segments starting at 0; found {available}')
         result.extend(sorted(found, key=lambda f: f['segment']))
     return result
 
@@ -114,7 +117,7 @@ def main():
     parser.add_argument('--constraint', default='el9')
     parser.add_argument('--ram', default='3GB')
     parser.add_argument('--time', default='24h')
-    parser.add_argument('--submit', action='store_true', help='create, add every segment, and start the complete workflow')
+    parser.add_argument('--submit', action='store_true', help='create one job per complete run and start the workflow')
     args = parser.parse_args()
     sample_dir = 'ELASTIC' if args.sample == 'elastic' else 'OPTICS/SIEVE'
     if args.output is None:
@@ -123,12 +126,13 @@ def main():
         args.workflow = f'hms_{args.sample}_oct29_ytar0_flags_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
     runs = run_numbers(args.runlist)
     segments = raw_segments(runs, args.mss)
+    run_inputs = {run: [item for item in segments if item['run'] == run] for run in runs}
     settings = configuration(repo, runs)
     if not Path(args.setup).is_file():
         raise ValueError('Missing hcswif environment setup: ' + args.setup)
     if not re.fullmatch(r'[A-Za-z0-9_-]+', args.workflow):
         raise ValueError('Workflow name may contain only letters, digits, underscores and hyphens')
-    print(f'{len(runs)} runs, {len(segments)} segment jobs, all events (-1)')
+    print(f'{len(runs)} complete-run jobs, {len(segments)} raw segments, all events (-1)')
     for setting in MATRICES:
         print(setting, 'runs:', ' '.join(str(r) for r in runs if settings[r] == setting))
     output = Path(args.output).resolve() / args.workflow
@@ -152,6 +156,8 @@ def main():
                 'matrix_source_commit': 'd7c8311763adb843698ca8028f24064f9527f64a',
                 'matrix_source_directory': '07_diagnostics/ytar_zero_refit_20261103',
                 'ytar_constant_fixed': 0,
+                'job_granularity': 'complete_run',
+                'run_segments': {run: [item['segment'] for item in items] for run, items in run_inputs.items()},
                 'run_settings': settings, 'segments': segments, 'events': -1,
                 'setup_path': str(Path(args.setup).resolve()),
                 'setup_sha256': hashlib.sha256(Path(args.setup).read_bytes()).hexdigest(),
@@ -173,32 +179,35 @@ def main():
     subprocess.run(['gzip', str(archive)], check=True)
     archive = Path(str(archive) + '.gz')
     commands = []
-    for item in segments:
-        run, seg = item['run'], item['segment']
-        destination = output / settings[run] / f'run_{run}' / f'seg_{seg}'
+    for run, items in run_inputs.items():
+        max_segment = items[-1]['segment']
+        raw_bytes = sum(item['bytes'] for item in items)
+        destination = output / settings[run] / f'run_{run}'
         for directory in ['rootfiles', 'reports']:
             (destination / directory).mkdir(parents=True)
-        command = ['swif2', 'add-job', args.workflow, '-name', f'{args.sample}_{run}_seg{seg}',
+        raw_inputs = []
+        for item in items:
+            raw_inputs.extend(['-input', f'nps_coin_{run}.dat.{item["segment"]}', 'mss:' + item['mss']])
+        command = ['swif2', 'add-job', args.workflow, '-name', f'{args.sample}_{run}',
                    '-account', args.account, '-partition', args.partition, '-cores', '1',
                    '-constraint', args.constraint,
                    '-ram', args.ram, '-time', args.time,
-                   '-disk-scratch', str(max(50_000_000_000, item['bytes'] * 4)),
+                   '-disk-scratch', str(max(50_000_000_000, raw_bytes * 4)),
                    '-stdout', str(log_dir / '@job_name@-@attempt_id@.out'),
                    '-stderr', str(log_dir / '@job_name@-@attempt_id@.err'),
                    '-input', 'nps_replay.tar.gz', 'file:' + str(archive),
                    '-input', 'elastic_swif_worker.sh', 'file:' + str(worker),
-                   '-input', 'elastic_farm_setup.sh', 'file:' + str(farm_setup),
-                   '-input', f'nps_coin_{run}.dat.{seg}', 'mss:' + item['mss'],
+                   '-input', 'elastic_farm_setup.sh', 'file:' + str(farm_setup)] + raw_inputs + [
                    '-output', 'match:ROOTfiles/OPTICS/*.root', 'file:' + str(destination / 'rootfiles'),
                    '-output', 'match:REPORT_OUTPUT/HMS/*.report', 'file:' + str(destination / 'reports'),
-                   '/bin/bash', 'elastic_swif_worker.sh', str(run), str(seg), './elastic_farm_setup.sh']
+                   '/bin/bash', 'elastic_swif_worker.sh', str(run), str(max_segment), './elastic_farm_setup.sh']
         commands.append(command)
     (provenance / 'swif_commands.sh').write_text('\n'.join(' '.join(shlex.quote(x) for x in c) for c in commands) + '\n')
     subprocess.run(['swif2', 'create', args.workflow], check=True)
     for command in commands:
         subprocess.run(command, check=True)
     subprocess.run(['swif2', 'run', args.workflow], check=True)
-    print('Started all segment jobs:', args.workflow)
+    print('Started all complete-run jobs:', args.workflow)
     print('Monitor: swif2 status', args.workflow, '-jobs')
     print('Output:', output)
 

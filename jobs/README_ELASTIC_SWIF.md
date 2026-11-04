@@ -10,7 +10,10 @@ is a comment in the matrix header, outside the active coefficient block.
 Use `submit_elastic_swif.py` on ifarm with an explicit text file containing
 one elastic run number per line. Blank lines and `#` comments are allowed.
 Every available numeric segment under `/mss/hallc/c-nps/raw` is queued in
-one SWIF2 workflow. All events are replayed (`-1`), with one job per segment.
+one SWIF2 workflow. All events are replayed (`-1`), with one job per complete
+run. Every job stages segment 0 and all subsequent segments for that run, so
+hcana can read the run-start metadata before processing later segments.
+Missing segment 0 or gaps in the segment numbering stop submission.
 
 ```bash
 python3 jobs/submit_elastic_swif.py jobs/elastic_oct29_runs.txt --submit
@@ -23,7 +26,7 @@ can be supplied as the positional argument.
 
 The worker uses the existing `SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C`
 without changing its physics or output definitions. Each job gets a separate
-scratch directory. It reads its staged raw segment from `.` and writes to
+scratch directory. It reads all its staged raw segments from `.` and writes to
 `ROOTfiles/OPTICS` and `REPORT_OUTPUT/HMS`. ROOT files are checked there with
 the existing `check_root` program before SWIF copies outputs to volatile.
 
@@ -32,16 +35,15 @@ The output hierarchy is:
 ```text
 /volatile/hallc/nps/cploen/ROOTfiles/ELASTIC/
   oct29_beam_search_matrix_flags_offsets_ytar0_refit_20261103/WORKFLOW/
-    5p878/run_RUN/seg_SEG/rootfiles/*.root
-    5p878/run_RUN/seg_SEG/reports/*.report
+    5p878/run_RUN/rootfiles/*.root
+    5p878/run_RUN/reports/*.report
     6p117/...
     6p667/...
     provenance/
 ```
 
-Keeping each segment separate prevents the unchanged optics macro's identical
-per-run filenames from colliding. Retain all ROOT rollover files when later
-combining the segments. Job stdout/stderr are under `/farm_out/cploen/WORKFLOW`,
+Each run has its own output directory. Retain all ROOT rollover files
+produced by a multi-segment run. Job stdout/stderr are under `/farm_out/cploen/WORKFLOW`,
 with separate files for each attempt.
 
 The provenance directory contains the committed replay snapshot (including
@@ -56,8 +58,8 @@ provenance and its checksum is recorded. `--setup` can select another script.
 The missing `/u/group/nps/cploen/hcswif/setup.sh` is not required.
 
 Default resources match the uploaded `swif2_stuff` jobs: `hallc`, `production`,
-`el9`, one core, 3 GB RAM and 24 hours. Scratch space is at least 50 GB or four
-times the raw segment size, plus the staged inputs. `--ram`, `--time`,
+`el9`, one core, 3 GB RAM and 24 hours per complete run. Scratch space is at least 50 GB or four
+times the total raw-file size for that run, plus the staged inputs. `--ram`, `--time`,
 `--account`, `--partition` and `--constraint` can be
 set to the values appropriate to your established farm configuration.
 
@@ -76,7 +78,7 @@ The same launcher and optics macro also support the sieve test:
 
 ```bash
 python3 jobs/submit_elastic_swif.py jobs/sieve_oct29_runs.txt \
-  --sample sieve --workflow hms_sieve_ytar0_flags_20261104 --submit
+  --sample sieve --workflow hms_sieve_ytar0_flags_fullrun_20261104 --submit
 ```
 
 The list contains 41 runs: 11 at 5.878, 14 at 6.117 and 16 at 6.667 GeV/c.
@@ -88,10 +90,11 @@ Previously deferred 1961 and 5165–5167 are included for this full replay test.
 `--sample sieve` selects a separate default output directory:
 `/volatile/hallc/nps/cploen/ROOTfiles/OPTICS/SIEVE/oct29_beam_search_matrix_flags_offsets_ytar0_refit_20261103/WORKFLOW/`.
 Job names and saved run-list provenance are labeled `sieve`. The matrices,
-flags, all-event replay, per-segment staging and farm resources are the same
+flags, all-event replay, complete-run staging and farm resources are the same
 as the corrected elastic workflow. The elastic workflow can continue running.
 
 After pulling a configuration correction, submit a new workflow. Existing
 workflows retain their archived snapshot and will not acquire the correction
 when resumed. For this flags-convention correction, use a fresh name such
-as `hms_elastic_ytar0_flags_20261104`.
+as `hms_elastic_ytar0_flags_fullrun_20261104`. Segment-based workflows
+that failed run initialization must also be replaced, not resumed.
