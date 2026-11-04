@@ -70,6 +70,27 @@ SWIF2 input/output staging and resource syntax follow the
 [JLab add-job documentation](https://scicomp.jlab.org/cli/add-job.html).
 Farm execution and real elastic-event reconstruction must be checked on ifarm.
 
+## Sieve replay
+
+The same launcher and optics macro also support the sieve test:
+
+```bash
+python3 jobs/submit_elastic_swif.py jobs/sieve_oct29_runs.txt \
+  --sample sieve --workflow hms_sieve_ytar0_flags_20261104 --submit
+```
+
+The list contains 41 runs: 11 at 5.878, 14 at 6.117 and 16 at 6.667 GeV/c.
+It uses the physical-run lists uploaded in `cploen/ifarm-swif2-handoff`
+commit `88501c6c7b664a1524719494f5bd8fccfa0f4be1`, adds 7008 as documented
+in the October 29 campaign runbook, and excludes 1242, marked junk there.
+Previously deferred 1961 and 5165–5167 are included for this full replay test.
+
+`--sample sieve` selects a separate default output directory:
+`/volatile/hallc/nps/cploen/ROOTfiles/OPTICS/SIEVE/oct29_beam_search_matrix_flags_offsets_ytar0_refit_20261103/WORKFLOW/`.
+Job names and saved run-list provenance are labeled `sieve`. The matrices,
+flags, all-event replay, per-segment staging and farm resources are the same
+as the corrected elastic workflow. The elastic workflow can continue running.
+
 After pulling a configuration correction, submit a new workflow. Existing
 workflows retain their archived snapshot and will not acquire the correction
 when resumed. For this flags-convention correction, use a fresh name such

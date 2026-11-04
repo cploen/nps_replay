@@ -1,0 +1,47 @@
+# Sieve replay: saved physical-run lists plus campaign addition 7008.
+# Run 1242 is excluded as junk, per the October 29 campaign runbook.
+# Previously deferred 1961 and 5165-5167 are included in this full test.
+# 5.878 GeV/c
+1711
+1712
+1713
+1717
+1718
+1720
+5168
+5169
+5170
+5171
+7008
+# 6.117 GeV/c
+1243
+1245
+1246
+1248
+1960
+1961
+1962
+1964
+1965
+1966
+1967
+5165
+5166
+5167
+# 6.667 GeV/c
+1540
+1544
+5156
+5157
+5158
+5159
+5160
+5161
+5162
+5163
+5164
+6981
+6982
+6983
+6984
+6985

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Submit every MSS segment of an explicit elastic run list to SWIF2."""
+"""Submit every MSS segment of an explicit elastic or sieve run list to SWIF2."""
 import argparse
 import datetime
 import glob
@@ -35,7 +35,7 @@ def run_numbers(path):
             raise ValueError('Expected one run number per line: ' + line)
         result.add(int(line))
     if not result:
-        raise ValueError('Empty elastic run list')
+        raise ValueError('Empty run list')
     return sorted(result)
 
 
@@ -103,11 +103,12 @@ def configuration(repo, runs):
 def main():
     repo = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('runlist', help='one elastic run number per line')
+    parser.add_argument('runlist', help='one run number per line')
+    parser.add_argument('--sample', choices=['elastic', 'sieve'], default='elastic')
     parser.add_argument('--setup', default=str(repo / 'jobs/setup_elastic_farm.sh'))
     parser.add_argument('--mss', default='/mss/hallc/c-nps/raw')
-    parser.add_argument('--output', default='/volatile/hallc/nps/cploen/ROOTfiles/ELASTIC/oct29_beam_search_matrix_flags_offsets_ytar0_refit_20261103')
-    parser.add_argument('--workflow', default='hms_elastic_oct29_ytar0_flags_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
+    parser.add_argument('--output', help='override the sample-specific volatile output directory')
+    parser.add_argument('--workflow', help='override the sample-specific workflow name')
     parser.add_argument('--account', default='hallc')
     parser.add_argument('--partition', default='production')
     parser.add_argument('--constraint', default='el9')
@@ -115,6 +116,11 @@ def main():
     parser.add_argument('--time', default='24h')
     parser.add_argument('--submit', action='store_true', help='create, add every segment, and start the complete workflow')
     args = parser.parse_args()
+    sample_dir = 'ELASTIC' if args.sample == 'elastic' else 'OPTICS/SIEVE'
+    if args.output is None:
+        args.output = f'/volatile/hallc/nps/cploen/ROOTfiles/{sample_dir}/oct29_beam_search_matrix_flags_offsets_ytar0_refit_20261103'
+    if args.workflow is None:
+        args.workflow = f'hms_{args.sample}_oct29_ytar0_flags_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
     runs = run_numbers(args.runlist)
     segments = raw_segments(runs, args.mss)
     settings = configuration(repo, runs)
@@ -139,7 +145,7 @@ def main():
     provenance.mkdir()
     log_dir = Path('/farm_out') / os.environ['USER'] / args.workflow
     log_dir.mkdir(parents=True, exist_ok=True)
-    metadata = {'commit': commit, 'matrix_sha256': MATRICES, 'external_angular_offsets_rad': ANGULAR_OFFSETS_RAD,
+    metadata = {'sample': args.sample, 'commit': commit, 'matrix_sha256': MATRICES, 'external_angular_offsets_rad': ANGULAR_OFFSETS_RAD,
                 'source_matrix_sha256': SOURCE_MATRICES,
                 'angular_offset_convention': 'hmsflags; 00000 is header comment only',
                 'matrix_source_repository': 'cploen/hallc_spectrometer_angular_optics',
@@ -152,7 +158,7 @@ def main():
                 'kinematics_sha256': hashlib.sha256((repo / 'DBASE/NPS/standard_coin.kinematics').read_bytes()).hexdigest()}
     metadata_bytes = (json.dumps(metadata, indent=2) + '\n').encode()
     (provenance / 'manifest.json').write_bytes(metadata_bytes)
-    shutil.copyfile(args.runlist, provenance / 'elastic_runs.txt')
+    shutil.copyfile(args.runlist, provenance / f'{args.sample}_runs.txt')
     worker = provenance / 'elastic_swif_worker.sh'
     shutil.copyfile(repo / 'jobs/elastic_swif_worker.sh', worker)
     farm_setup = provenance / 'elastic_farm_setup.sh'
@@ -172,7 +178,7 @@ def main():
         destination = output / settings[run] / f'run_{run}' / f'seg_{seg}'
         for directory in ['rootfiles', 'reports']:
             (destination / directory).mkdir(parents=True)
-        command = ['swif2', 'add-job', args.workflow, '-name', f'elastic_{run}_seg{seg}',
+        command = ['swif2', 'add-job', args.workflow, '-name', f'{args.sample}_{run}_seg{seg}',
                    '-account', args.account, '-partition', args.partition, '-cores', '1',
                    '-constraint', args.constraint,
                    '-ram', args.ram, '-time', args.time,
