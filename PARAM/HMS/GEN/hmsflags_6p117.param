@@ -10,12 +10,12 @@
 ; In transport coordinates phi = hyptar = dy/dz and theta = hxptar = dx/dz 
 ;    but for unknown reasons the yp offset is named  htheta_offset
 ;    and  the xp offset is named  hphi_offset
-; Final October 29, 2026 angular matrix includes its fitted 00000 terms.
-; Keep external angular offsets zero to avoid adding them twice.
-; htheta_offset adds to yptar; hphi_offset adds to xptar.
+; Fitted angular constants are applied here, following the replay convention.
+; The matching matrix records 00000 only as a comment before the data block.
+; YTAR is refitted with its constant fixed at zero.
   hdelta_offset = 0.       ; (%)   hdelta_tar = hdelta_tar + hdelta_offset
-  htheta_offset = 0.0 ; (rad) hyp_tar; constant included in matrix
-  hphi_offset = 0.0 ; (rad) hxp_tar; constant included in matrix
+  htheta_offset = 5.3299989247366630e-04 ; (rad) hyp_tar constant
+  hphi_offset = 1.6898981513098635e-03 ; (rad) hxp_tar constant
 ;
 
 ;saturation correction flag

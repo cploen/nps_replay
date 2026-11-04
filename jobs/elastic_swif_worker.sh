@@ -17,7 +17,7 @@ cd "$scratch_dir"
 command -v hcana
 [[ -s nps_coin_${run}.dat.${segment} ]]
 mkdir -p ROOTfiles/OPTICS REPORT_OUTPUT/HMS
-echo "Run $run, segment $segment; all events; October 29 beam basis, constrained YTAR=0 refit, embedded angular offsets"
+echo "Run $run, segment $segment; all events; October 29 beam basis, constrained YTAR=0 refit, angular constants applied through hmsflags"
 cat ELASTIC_REPLAY_PROVENANCE.json
 hcana -l -b -q "SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C($run,-1,1,$segment,$segment)"
 shopt -s nullglob

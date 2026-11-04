@@ -2,7 +2,10 @@
 
 The installed matrices use the saved October 29 beam-selected basis, with
 YTAR's constant fixed at zero and the other adjustable YTAR coefficients
-refitted. XPTAR, YPTAR and momentum coefficients are unchanged.
+refitted. Nonconstant XPTAR, YPTAR and momentum coefficients are unchanged.
+The fitted XPTAR and YPTAR constants are applied through `hphi_offset` and
+`htheta_offset` in the momentum-specific `hmsflags` files. The `00000` row
+is a comment in the matrix header, outside the active coefficient block.
 
 Use `submit_elastic_swif.py` on ifarm with an explicit text file containing
 one elastic run number per line. Blank lines and `#` comments are allowed.
@@ -28,7 +31,7 @@ The output hierarchy is:
 
 ```text
 /volatile/hallc/nps/cploen/ROOTfiles/ELASTIC/
-  oct29_beam_search_matrix_embedded_offsets_ytar0_refit_20261103/WORKFLOW/
+  oct29_beam_search_matrix_flags_offsets_ytar0_refit_20261103/WORKFLOW/
     5p878/run_RUN/seg_SEG/rootfiles/*.root
     5p878/run_RUN/seg_SEG/reports/*.report
     6p117/...
@@ -43,7 +46,8 @@ with separate files for each attempt.
 
 The provenance directory contains the committed replay snapshot (including
 coin kinematics), its commit ID and kinematics checksum, the verified matrix
-checksums, run/setting/segment mapping, raw-file sizes, run list and exact SWIF
+checksums, source-matrix checksums, fitted angular offsets in radians,
+run/setting/segment mapping, raw-file sizes, run list and exact SWIF
 commands. The worker stages `jobs/setup_elastic_farm.sh`, which loads
 `nps_replay/5.28.24`, matching the saved angular-sandbox `run_one_optics.sh`
 from commit `f76e9065922ac5fe59df4311c3d4a30a9f2bca9e`. It then sources the
@@ -65,3 +69,8 @@ remains paused and the error is reported. Inspect that workflow before retrying.
 SWIF2 input/output staging and resource syntax follow the
 [JLab add-job documentation](https://scicomp.jlab.org/cli/add-job.html).
 Farm execution and real elastic-event reconstruction must be checked on ifarm.
+
+After pulling a configuration correction, submit a new workflow. Existing
+workflows retain their archived snapshot and will not acquire the correction
+when resumed. For this flags-convention correction, use a fresh name such
+as `hms_elastic_ytar0_flags_20261104`.

@@ -15,10 +15,14 @@ import subprocess
 import tarfile
 
 MATRICES = {
-    '5p878': '855aecc8205a17b8e42d9867f61b2da7c7eb6655b1af8628cb56e3cf82468772',
-    '6p117': '067a0187901d08a00f62171f0d34a9e5932f85c077eabfee55da88a1fda41355',
-    '6p667': 'd60928e0b0ac81347431e30fd5bb6355faed121b2f16d70ee9c90e8fd599b76d',
+    '5p878': '7dfd7bed25303550a1d357dbab74aca1e6a48a2d070b4fd65488fa1743e4cc13',
+    '6p117': '0e876c4febc14d8a89800811b54562d5f7ae6c0be2eeebbd399c66e051674125',
+    '6p667': '07f4f7b6cf6cbac8b0b163ebb24b43f2578a21aaf116bec020a7c4baab5c6b19',
 }
+
+ANGULAR_OFFSETS_RAD = {'5p878': {'hphi_offset': 0.0015452061252705057, 'htheta_offset': 0.00044623110164892805}, '6p117': {'hphi_offset': 0.0016898981513098635, 'htheta_offset': 0.0005329998924736663}, '6p667': {'hphi_offset': 0.0020566023391089734, 'htheta_offset': 0.00053123777935165}}
+
+SOURCE_MATRICES = {'5p878': '855aecc8205a17b8e42d9867f61b2da7c7eb6655b1af8628cb56e3cf82468772', '6p117': '067a0187901d08a00f62171f0d34a9e5932f85c077eabfee55da88a1fda41355', '6p667': 'd60928e0b0ac81347431e30fd5bb6355faed121b2f16d70ee9c90e8fd599b76d'}
 
 
 def run_numbers(path):
@@ -60,11 +64,15 @@ def configuration(repo, runs):
         matrix = repo / f'DATFILES/nps_hms_optics_{setting}_ang.dat'
         if hashlib.sha256(matrix.read_bytes()).hexdigest() != expected:
             raise ValueError('Unexpected matrix: ' + str(matrix))
+        for line in matrix.read_text().splitlines():
+            fields = line.split()
+            if len(fields) == 5 and fields[-1] == '00000':
+                raise ValueError('Active 00000 row would duplicate flags offsets: ' + str(matrix))
         text = (repo / f'PARAM/HMS/GEN/hmsflags_{setting}.param').read_text()
         for name in ['htheta_offset', 'hphi_offset']:
             values = re.findall(rf'^\s*{name}\s*=\s*([^;\n]+)', text, re.M)
-            if len(values) != 1 or float(values[0]) != 0.:
-                raise ValueError('Expected zero external offset: ' + name)
+            if len(values) != 1 or float(values[0]) != ANGULAR_OFFSETS_RAD[setting][name]:
+                raise ValueError('Unexpected fitted angular offset: ' + name)
     # Resolve the run-range optics assignments, in their file order.
     database = (repo / 'DBASE/NPS/standard_coin.database').read_text()
     selected = {run: None for run in runs}
@@ -98,8 +106,8 @@ def main():
     parser.add_argument('runlist', help='one elastic run number per line')
     parser.add_argument('--setup', default=str(repo / 'jobs/setup_elastic_farm.sh'))
     parser.add_argument('--mss', default='/mss/hallc/c-nps/raw')
-    parser.add_argument('--output', default='/volatile/hallc/nps/cploen/ROOTfiles/ELASTIC/oct29_beam_search_matrix_embedded_offsets_ytar0_refit_20261103')
-    parser.add_argument('--workflow', default='hms_elastic_oct29_ytar0_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
+    parser.add_argument('--output', default='/volatile/hallc/nps/cploen/ROOTfiles/ELASTIC/oct29_beam_search_matrix_flags_offsets_ytar0_refit_20261103')
+    parser.add_argument('--workflow', default='hms_elastic_oct29_ytar0_flags_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
     parser.add_argument('--account', default='hallc')
     parser.add_argument('--partition', default='production')
     parser.add_argument('--constraint', default='el9')
@@ -131,7 +139,9 @@ def main():
     provenance.mkdir()
     log_dir = Path('/farm_out') / os.environ['USER'] / args.workflow
     log_dir.mkdir(parents=True, exist_ok=True)
-    metadata = {'commit': commit, 'matrix_sha256': MATRICES, 'external_angular_offsets': 0,
+    metadata = {'commit': commit, 'matrix_sha256': MATRICES, 'external_angular_offsets_rad': ANGULAR_OFFSETS_RAD,
+                'source_matrix_sha256': SOURCE_MATRICES,
+                'angular_offset_convention': 'hmsflags; 00000 is header comment only',
                 'matrix_source_repository': 'cploen/hallc_spectrometer_angular_optics',
                 'matrix_source_commit': 'd7c8311763adb843698ca8028f24064f9527f64a',
                 'matrix_source_directory': '07_diagnostics/ytar_zero_refit_20261103',
