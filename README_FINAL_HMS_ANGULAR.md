@@ -1,5 +1,7 @@
 # HMS angular matrices with constrained YTAR
 
+For the combined November 5 angular plus delta calibration and replay preparation, see [README_HMS_ANGULAR_DELTA.md](README_HMS_ANGULAR_DELTA.md). This file records the preceding angular-only calibration.
+
 Branch: `codex/final-hms-angular-20261029` in `cploen/nps_replay`.
 
 These matrices replace the original October 29 beam-search exports with

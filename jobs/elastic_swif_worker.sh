@@ -11,6 +11,17 @@ farm_setup=$3
 scratch_dir=$PWD
 [[ $run =~ ^[0-9]+$ && $max_segment =~ ^[0-9]+$ ]]
 tar -xzf nps_replay.tar.gz
+python3 - <<'PY'
+import hashlib, json
+from pathlib import Path
+meta = json.loads(Path('ELASTIC_REPLAY_PROVENANCE.json').read_text())
+for name, expected in meta['runtime_file_sha256'].items():
+    if hashlib.sha256(Path(name).read_bytes()).hexdigest() != expected:
+        raise SystemExit('Runtime configuration checksum mismatch: ' + name)
+if hashlib.sha256(Path('elastic_farm_setup.sh').read_bytes()).hexdigest() != meta['setup_sha256']:
+    raise SystemExit('Farm setup checksum mismatch')
+print('Verified frozen matrices, flags, optics parameters and run database')
+PY
 # Use the same environment setup as the existing hcswif wrapper.
 source "$farm_setup"
 cd "$scratch_dir"
@@ -19,7 +30,7 @@ for ((segment=0; segment<=max_segment; segment++)); do
   [[ -s nps_coin_${run}.dat.${segment} ]]
 done
 mkdir -p ROOTfiles/OPTICS REPORT_OUTPUT/HMS
-echo "Run $run, all segments 0 through $max_segment; all events; October 29 beam basis, constrained YTAR=0 refit, angular constants applied through hmsflags"
+echo "Run $run, all segments 0 through $max_segment; all events; angular plus delta calibration 2026-11-05, YTAR zero-order fixed, constants applied once through hmsflags"
 cat ELASTIC_REPLAY_PROVENANCE.json
 hcana -l -b -q "SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C($run,-1,1,$max_segment,0)"
 shopt -s nullglob

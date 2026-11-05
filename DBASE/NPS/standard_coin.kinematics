@@ -13784,7 +13784,7 @@ NPS_target_distance = 957
 1253
 gpbeam = 10.54353183
 gtargmass_amu = 1.00794
-htheta_lab = -20.7
+htheta_lab = -22.120
 hpcentral = 6.117
 stheta_lab = 37.3
 nps_theta_offset = -16.3068

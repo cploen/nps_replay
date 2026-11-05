@@ -14,13 +14,12 @@ import shutil
 import subprocess
 import tarfile
 
-MATRICES = {
-    '5p878': '7dfd7bed25303550a1d357dbab74aca1e6a48a2d070b4fd65488fa1743e4cc13',
-    '6p117': '0e876c4febc14d8a89800811b54562d5f7ae6c0be2eeebbd399c66e051674125',
-    '6p667': '07f4f7b6cf6cbac8b0b163ebb24b43f2578a21aaf116bec020a7c4baab5c6b19',
-}
-
-ANGULAR_OFFSETS_RAD = {'5p878': {'hphi_offset': 0.0015452061252705057, 'htheta_offset': 0.00044623110164892805}, '6p117': {'hphi_offset': 0.0016898981513098635, 'htheta_offset': 0.0005329998924736663}, '6p667': {'hphi_offset': 0.0020566023391089734, 'htheta_offset': 0.00053123777935165}}
+CALIBRATION_FILE = 'config/hms_angular_delta_20261105/fit_manifest.json'
+CALIBRATION = json.loads((Path(__file__).resolve().parents[1] / CALIBRATION_FILE).read_text())
+MATRICES = {key: value['matrix_sha256'] for key, value in CALIBRATION['settings'].items()}
+ANGULAR_OFFSETS_RAD = {key: {name: value['offsets'][name] for name in ('hphi_offset', 'htheta_offset')}
+                       for key, value in CALIBRATION['settings'].items()}
+DEFAULT_OUTPUT_ROOT = '/volatile/hallc/nps/cploen/ROOTfiles/nov05_angular_delta_matrix_flags_offsets_ytar0_refit_20261105'
 
 SOURCE_MATRICES = {'5p878': '855aecc8205a17b8e42d9867f61b2da7c7eb6655b1af8628cb56e3cf82468772', '6p117': '067a0187901d08a00f62171f0d34a9e5932f85c077eabfee55da88a1fda41355', '6p667': 'd60928e0b0ac81347431e30fd5bb6355faed121b2f16d70ee9c90e8fd599b76d'}
 
@@ -72,10 +71,18 @@ def configuration(repo, runs):
             if len(fields) == 5 and fields[-1] == '00000':
                 raise ValueError('Active 00000 row would duplicate flags offsets: ' + str(matrix))
         text = (repo / f'PARAM/HMS/GEN/hmsflags_{setting}.param').read_text()
-        for name in ['htheta_offset', 'hphi_offset']:
+        expected_flags = CALIBRATION['settings'][setting]['flags_sha256']
+        if hashlib.sha256(text.encode()).hexdigest() != expected_flags:
+            raise ValueError('Unexpected HMS flags for ' + setting)
+        for name in ['htheta_offset', 'hphi_offset', 'hdelta_offset']:
             values = re.findall(rf'^\s*{name}\s*=\s*([^;\n]+)', text, re.M)
-            if len(values) != 1 or float(values[0]) != ANGULAR_OFFSETS_RAD[setting][name]:
-                raise ValueError('Unexpected fitted angular offset: ' + name)
+            if len(values) != 1 or float(values[0]) != CALIBRATION['settings'][setting]['offsets'][name]:
+                raise ValueError('Unexpected fitted target offset: ' + name)
+    kin = (repo / 'DBASE/NPS/standard_coin.kinematics').read_text()
+    block = re.search(r'(?ms)^1253\s*\n(.*?)(?=^\d+\s*(?:-\s*\d+)?\s*$|\Z)', kin)
+    angle = re.search(r'^htheta_lab\s*=\s*([^;\s]+)', block[1], re.M) if block else None
+    if not angle or float(angle[1]) != -22.120:
+        raise ValueError('Run 1253 must retain htheta_lab = -22.120 degrees')
     # Resolve the run-range optics assignments, in their file order.
     database = (repo / 'DBASE/NPS/standard_coin.database').read_text()
     selected = {run: None for run in runs}
@@ -117,13 +124,15 @@ def main():
     parser.add_argument('--constraint', default='el9')
     parser.add_argument('--ram', default='3GB')
     parser.add_argument('--time', default='24h')
-    parser.add_argument('--submit', action='store_true', help='create one job per complete run and start the workflow')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--prepare', action='store_true', help='freeze runtime files and write submission commands without queuing jobs')
+    mode.add_argument('--submit', action='store_true', help='freeze inputs, create complete-run jobs and start the workflow')
     args = parser.parse_args()
     sample_dir = 'ELASTIC' if args.sample == 'elastic' else 'OPTICS/SIEVE'
     if args.output is None:
-        args.output = f'/volatile/hallc/nps/cploen/ROOTfiles/{sample_dir}/oct29_beam_search_matrix_flags_offsets_ytar0_refit_20261103'
+        args.output = f'{DEFAULT_OUTPUT_ROOT}/{sample_dir}'
     if args.workflow is None:
-        args.workflow = f'hms_{args.sample}_oct29_ytar0_flags_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        args.workflow = f'hms_{args.sample}_angdelta_ytar0_fullrun_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
     runs = run_numbers(args.runlist)
     segments = raw_segments(runs, args.mss)
     run_inputs = {run: [item for item in segments if item['run'] == run] for run in runs}
@@ -137,10 +146,10 @@ def main():
         print(setting, 'runs:', ' '.join(str(r) for r in runs if settings[r] == setting))
     output = Path(args.output).resolve() / args.workflow
     print('Output:', output)
-    if not args.submit:
-        print('Plan only. Add --submit to queue every segment and start the workflow.')
+    if not (args.prepare or args.submit):
+        print('Plan only. Use --prepare to freeze inputs or --submit to prepare and queue complete runs.')
         return
-    if not shutil.which('swif2'):
+    if args.submit and not shutil.which('swif2'):
         raise ValueError('swif2 is unavailable; run this command on ifarm')
     subprocess.run(['git', 'diff', '--exit-code', 'HEAD', '--'], cwd=repo, check=True, stdout=subprocess.DEVNULL)
     commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=repo, text=True).strip()
@@ -149,9 +158,19 @@ def main():
     provenance.mkdir()
     log_dir = Path('/farm_out') / os.environ['USER'] / args.workflow
     log_dir.mkdir(parents=True, exist_ok=True)
+    runtime_paths = [CALIBRATION_FILE, 'DBASE/NPS/standard_coin.database', 'DBASE/NPS/standard_coin.kinematics']
+    for setting in MATRICES:
+        runtime_paths.extend([f'DATFILES/nps_hms_optics_{setting}_ang.dat',
+                              f'PARAM/HMS/GEN/hmsflags_{setting}.param',
+                              f'PARAM/HMS/GEN/hcana_{setting}.param'])
+    runtime_hashes = {name: hashlib.sha256((repo / name).read_bytes()).hexdigest() for name in runtime_paths}
     metadata = {'sample': args.sample, 'commit': commit, 'matrix_sha256': MATRICES, 'external_angular_offsets_rad': ANGULAR_OFFSETS_RAD,
+                'external_delta_offsets_fraction': {s: v['offsets']['hdelta_offset'] for s, v in CALIBRATION['settings'].items()},
+                'calibration_file': CALIBRATION_FILE, 'calibration': CALIBRATION,
+                'runtime_file_sha256': runtime_hashes,
                 'source_matrix_sha256': SOURCE_MATRICES,
-                'angular_offset_convention': 'hmsflags; 00000 is header comment only',
+                'angular_offset_convention': 'hmsflags; all 00000 values are header comments only',
+                'delta_offset_convention': 'hdelta_offset is fractional delta, added before H.gtr.dp is multiplied by 100',
                 'matrix_source_repository': 'cploen/hallc_spectrometer_angular_optics',
                 'matrix_source_commit': 'd7c8311763adb843698ca8028f24064f9527f64a',
                 'matrix_source_directory': '07_diagnostics/ytar_zero_refit_20261103',
@@ -178,6 +197,16 @@ def main():
         tar.addfile(item, io.BytesIO(metadata_bytes))
     subprocess.run(['gzip', str(archive)], check=True)
     archive = Path(str(archive) + '.gz')
+    # Copy the actual committed runtime inputs out of the job snapshot, not live files.
+    with tarfile.open(archive, 'r:gz') as tar:
+        for name, expected in runtime_hashes.items():
+            raw = tar.extractfile(name).read()
+            if hashlib.sha256(raw).hexdigest() != expected:
+                raise ValueError('Committed snapshot differs from runtime input: ' + name)
+            dest = provenance / 'runtime_config' / name
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(raw)
+    (provenance / 'snapshot_sha256.txt').write_text(hashlib.sha256(archive.read_bytes()).hexdigest() + '  nps_replay.tar.gz\n')
     commands = []
     for run, items in run_inputs.items():
         max_segment = items[-1]['segment']
@@ -203,6 +232,17 @@ def main():
                    '/bin/bash', 'elastic_swif_worker.sh', str(run), str(max_segment), './elastic_farm_setup.sh']
         commands.append(command)
     (provenance / 'swif_commands.sh').write_text('\n'.join(' '.join(shlex.quote(x) for x in c) for c in commands) + '\n')
+    submit_script = provenance / 'submit_prepared.sh'
+    submit_script.write_text('#!/usr/bin/env bash\nset -euo pipefail\n' +
+        shlex.join(['swif2', 'create', args.workflow]) + '\n' +
+        '\n'.join(shlex.join(c) for c in commands) + '\n' +
+        shlex.join(['swif2', 'run', args.workflow]) + '\n')
+    submit_script.chmod(0o755)
+    if args.prepare:
+        print('Prepared immutable runtime snapshot; no jobs queued.')
+        print('Runtime configuration copies:', provenance / 'runtime_config')
+        print('Submit the saved snapshot: bash', submit_script)
+        return
     subprocess.run(['swif2', 'create', args.workflow], check=True)
     for command in commands:
         subprocess.run(command, check=True)

@@ -10,10 +10,13 @@
 ; In transport coordinates phi = hyptar = dy/dz and theta = hxptar = dx/dz 
 ;    but for unknown reasons the yp offset is named  htheta_offset
 ;    and  the xp offset is named  hphi_offset
-; Fitted angular constants are applied here, following the replay convention.
-; The matching matrix records 00000 only as a comment before the data block.
-; YTAR is refitted with its constant fixed at zero.
-  hdelta_offset = 0.       ; (%)   hdelta_tar = hdelta_tar + hdelta_offset
+; Angular plus delta calibration packaged 2026-11-05.
+; Angular refit 2026-11-03; delta correction fit 2026-11-04.
+; All zero-order values are applied here once; matrix 00000 is comment-only.
+; YTAR zero-order term held fixed at zero; no external YTAR offset.
+; hcana adds hdelta_offset to fractional delta before multiplying by 100 for H.gtr.dp.
+; The historical percent annotation for hdelta_offset does not match hcana 1.1.
+  hdelta_offset = -4.34607846255048453e-04 ; fractional delta; H.gtr.dp shift = -4.34607846255048447e-02 percent
   htheta_offset = 4.4623110164892805e-04 ; (rad) hyp_tar constant
   hphi_offset = 1.5452061252705057e-03 ; (rad) hxp_tar constant
 ;

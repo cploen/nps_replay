@@ -1,0 +1,208 @@
+{
+  "schema": "hms_angular_delta_20261105_v1",
+  "combined_calibration_date": "2026-11-05",
+  "angular_refit_date": "2026-11-03",
+  "delta_refit_date": "2026-11-04",
+  "base_replay_commit": "43e8c45c12fd2ee2851cd8485ba48a6b13419bc6",
+  "ytar_zero_order_fixed_m": 0.0,
+  "zero_order_convention": "All constants are comment-only in matrices and applied once through hmsflags. hphi_offset=xptar radians, htheta_offset=yptar radians, hdelta_offset=fractional delta. No ytar offset is applied.",
+  "hcana_offset_evidence": {
+    "source": "/u/group/halla/apps/hcana/1.1/src/src/THcHallCSpectrometer.cxx",
+    "read_on_ifarm": "2026-11-05",
+    "lines": {
+      "567": "delta=sum[3] + fDeltaOffset",
+      "497": "track->SetDp(delta*100.0)"
+    }
+  },
+  "run_1253": {
+    "htheta_lab_deg": -22.12,
+    "central_angle_magnitude_deg": 22.12
+  },
+  "settings": {
+    "5p878": {
+      "matrix": "DATFILES/nps_hms_optics_5p878_ang.dat",
+      "flags": "PARAM/HMS/GEN/hmsflags_5p878.param",
+      "matrix_sha256": "1a5d4207fa794c07d1e1bb68757a4f53d0078a0894d8e008db1cac701ab76880",
+      "flags_sha256": "09b5aaa990c64e67603e763941237841f3594d8adb8e4071a06206eb26756e5d",
+      "baseline_matrix_sha256": "7dfd7bed25303550a1d357dbab74aca1e6a48a2d070b4fd65488fa1743e4cc13",
+      "source_final_selection_sha256": "50d4219c2a19412f473c1914b0e828f879cca438f04080cdf0c87ba12e2d3901",
+      "source_result": "/u/home/cploen/delta_refit_20261104/results_20261104/5p878",
+      "source_hashes": {
+        "events.npz": "647c334588011610600911278b050b0f08786a2d4364722d9ff8e7930046bae5",
+        "predictions.npz": "564104fd5007e9152ebee4a0c2adad4ae6512cdf0a8b565015381f80aa7b72b7",
+        "membership.npz": "727f3921234804a4c3980e42943ed461eb8d62639f8bee7de7dde18ec3b20389"
+      },
+      "simc_w_gev": 0.944954,
+      "correction_terms": 14,
+      "offsets": {
+        "hphi_offset": 0.0015452061252705057,
+        "htheta_offset": 0.00044623110164892805,
+        "hdelta_offset": -0.00043460784625504845
+      },
+      "zero_order_matrix_column_values": [
+        0.0015452061252705057,
+        0.0,
+        0.00044623110164892805,
+        -0.00043460784625504845
+      ],
+      "delta_correction_fraction": {
+        "00000": -0.00043460784625504845,
+        "00010": 0.031334020466621273,
+        "00100": 0.006857582915439303,
+        "01000": -0.03324391674476985,
+        "10000": 0.003177717116149899,
+        "00110": 0.54754080442835,
+        "10010": 0.5545870748492271,
+        "11000": -0.08559738159835704,
+        "20000": 0.009333246764504404,
+        "00210": -2.1325628168511956,
+        "02100": 7.053723331070353,
+        "03000": 0.31203417485115353,
+        "10020": 20.487815854742617,
+        "10200": -0.23449951725041343
+      },
+      "fit_status": {
+        "status": "candidate_for_replay_test",
+        "n_events": 6723,
+        "permanent_holdout": 0,
+        "nested_baseline_mse": 3.7073260976612907e-06,
+        "nested_candidate_mse": 3.4673871699867603e-06,
+        "nested_mse_ratio": 0.9352797888953195,
+        "final_terms": 14,
+        "final_condition": 20.28257616767943,
+        "final_ridge": 0.0,
+        "final_fit_mse": 3.206145419536894e-06,
+        "export_identity_max_error": 3.191891195797325e-16,
+        "simc_w_gev": 0.944954,
+        "caveat": "Nested scores assess the selection procedure; the final all-event fit is not a held-out prediction."
+      }
+    },
+    "6p117": {
+      "matrix": "DATFILES/nps_hms_optics_6p117_ang.dat",
+      "flags": "PARAM/HMS/GEN/hmsflags_6p117.param",
+      "matrix_sha256": "0a81677b012af505f6d9ecc79ed133431a70bebb85296284b03a44a7793c5193",
+      "flags_sha256": "a8bcd5fdaadd694eee7dad0d63be47abc6211e60a18b70d9d70e08bc0a669b23",
+      "baseline_matrix_sha256": "0e876c4febc14d8a89800811b54562d5f7ae6c0be2eeebbd399c66e051674125",
+      "source_final_selection_sha256": "f04c2e5624ab4ad392aff46f5817320357783c29b3c166efe9515dd0dadf8ec7",
+      "source_result": "/u/home/cploen/delta_refit_20261104/results_angle22120/6p117",
+      "source_hashes": {
+        "events.npz": "0b759874fb1e3d7f7fdcdd9399874a6f6c5006190c85bbe6af994765546cdbd1",
+        "predictions.npz": "5a87f86c79aaebfdef20f164821949770544e3dbed5f89c57c34b4e7344426ee",
+        "membership.npz": "6fa84502ee4021b7ddce6eb35ae64913d17b4a611f0ecf94ceaae3946fd3e578"
+      },
+      "simc_w_gev": 0.944127,
+      "correction_terms": 15,
+      "offsets": {
+        "hphi_offset": 0.0016898981513098635,
+        "htheta_offset": 0.0005329998924736663,
+        "hdelta_offset": -0.00023708000243836876
+      },
+      "zero_order_matrix_column_values": [
+        0.0016898981513098635,
+        0.0,
+        0.0005329998924736663,
+        -0.00023708000243836876
+      ],
+      "delta_correction_fraction": {
+        "00000": -0.00023708000243836876,
+        "00010": -0.03637595499426321,
+        "00100": 0.01867955683529119,
+        "01000": 0.01248703658528585,
+        "10000": -0.004949948500297126,
+        "00020": 5.18710313513949,
+        "00200": 0.003551474592925051,
+        "01100": 0.09910842257780685,
+        "02000": -0.7830840182737034,
+        "10010": 0.736173568362926,
+        "10100": -0.05041800616786731,
+        "20000": 0.01107158378628862,
+        "01020": -353.81703480867674,
+        "10020": 60.022569081229186,
+        "21000": -0.17813296128651476
+      },
+      "fit_status": {
+        "status": "candidate_for_replay_test",
+        "n_events": 7095,
+        "permanent_holdout": 0,
+        "nested_baseline_mse": 3.1257142728929973e-06,
+        "nested_candidate_mse": 2.581278135041789e-06,
+        "nested_mse_ratio": 0.8258202476878007,
+        "final_terms": 15,
+        "final_condition": 38.05180690779412,
+        "final_ridge": 0.0,
+        "final_fit_mse": 2.4429828160329416e-06,
+        "export_identity_max_error": 4.440892098500626e-16,
+        "simc_w_gev": 0.944127,
+        "caveat": "Nested scores assess the selection procedure; the final all-event fit is not a held-out prediction."
+      }
+    },
+    "6p667": {
+      "matrix": "DATFILES/nps_hms_optics_6p667_ang.dat",
+      "flags": "PARAM/HMS/GEN/hmsflags_6p667.param",
+      "matrix_sha256": "776b111632f72277a135656f9c6bc9cefd707351d9c4ca85bcda9cf6cc1a4e19",
+      "flags_sha256": "8b3b0934ec87deb16b737c9f40ea0ffe303af3155d549b46836f16c5aa0a22bd",
+      "baseline_matrix_sha256": "07f4f7b6cf6cbac8b0b163ebb24b43f2578a21aaf116bec020a7c4baab5c6b19",
+      "source_final_selection_sha256": "812231fbc8ccab6b0f420107b48ac8ecdb1194d2e5fe32ee0f02c7079b13136e",
+      "source_result": "/u/home/cploen/delta_refit_20261104/results_20261104/6p667",
+      "source_hashes": {
+        "events.npz": "edc4c8498e28013f29ed3d5fb092e23888230e64efd8fa12b11759a1a3d4b770",
+        "predictions.npz": "fe62752224c8148738e45f8189b1243046e4f52a16140555c671379efb4deb4d",
+        "membership.npz": "548173edd9b36874cb1bbb46ef0046e56c3bc76d8b6dd25c1e7a7073e612ee48"
+      },
+      "simc_w_gev": 0.943442,
+      "correction_terms": 23,
+      "offsets": {
+        "hphi_offset": 0.0020566023391089734,
+        "htheta_offset": 0.00053123777935165,
+        "hdelta_offset": 0.00027015716004233256
+      },
+      "zero_order_matrix_column_values": [
+        0.0020566023391089734,
+        0.0,
+        0.00053123777935165,
+        0.00027015716004233256
+      ],
+      "delta_correction_fraction": {
+        "00000": 0.00027015716004233256,
+        "00010": 0.08970952878927187,
+        "00100": 0.010477715510294918,
+        "01000": -0.01801685356487928,
+        "10000": 0.0032074718800005324,
+        "00020": 4.9090114507603095,
+        "01100": -0.16441059087324736,
+        "02000": 0.1859404681220193,
+        "10010": 0.8478950636247508,
+        "10100": -0.023505654665734656,
+        "11000": -0.10238254932391967,
+        "20000": 0.017381277372120786,
+        "00030": -740.554240100913,
+        "00120": 116.44078644640499,
+        "01020": -376.0001299142347,
+        "01110": -7.424572091429287,
+        "01200": 1.216166257883065,
+        "02010": -140.56934358249657,
+        "02100": 1.7034256624374005,
+        "10020": 70.97653648991101,
+        "11010": 10.205609823172958,
+        "21000": -0.109884699225429,
+        "30000": -0.028549222216590574
+      },
+      "fit_status": {
+        "status": "candidate_for_replay_test",
+        "n_events": 16756,
+        "permanent_holdout": 0,
+        "nested_baseline_mse": 3.293383224729932e-06,
+        "nested_candidate_mse": 2.511776770215421e-06,
+        "nested_mse_ratio": 0.7626737002103344,
+        "final_terms": 23,
+        "final_condition": 87.24915765042789,
+        "final_ridge": 0.0,
+        "final_fit_mse": 2.4539877338003995e-06,
+        "export_identity_max_error": 4.440892098500626e-16,
+        "simc_w_gev": 0.943442,
+        "caveat": "Nested scores assess the selection procedure; the final all-event fit is not a held-out prediction."
+      }
+    }
+  },
+  "kinematics_sha256": "7997a08e87a7381ce911d9fcddd2b3c469a4e60bc4527acc6d7961c8c1381362"
+}
