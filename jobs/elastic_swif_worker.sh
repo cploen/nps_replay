@@ -11,9 +11,10 @@ farm_setup=$3
 scratch_dir=$PWD
 [[ $run =~ ^[0-9]+$ && $max_segment =~ ^[0-9]+$ ]]
 tar -xzf nps_replay.tar.gz
-python3 - <<'PY'
-import hashlib, json
+python3 - "$run" <<'PY'
+import hashlib, json, sys
 from pathlib import Path
+from jobs.submit_elastic_swif import configuration
 meta = json.loads(Path('ELASTIC_REPLAY_PROVENANCE.json').read_text())
 for name, expected in meta['runtime_file_sha256'].items():
     if hashlib.sha256(Path(name).read_bytes()).hexdigest() != expected:
@@ -21,6 +22,12 @@ for name, expected in meta['runtime_file_sha256'].items():
 if hashlib.sha256(Path('elastic_farm_setup.sh').read_bytes()).hexdigest() != meta['setup_sha256']:
     raise SystemExit('Farm setup checksum mismatch')
 print('Verified frozen matrices, flags, optics parameters and run database')
+run = int(sys.argv[1])
+setting = configuration(Path('.'), [run], meta['calibration'])[run]
+if setting != meta['run_settings'][str(run)]:
+    raise SystemExit('Effective run setting differs from frozen submission')
+item = meta['calibration']['settings'][setting]
+print('Run',run,'uses',item['matrix'],'SHA256',item['matrix_sha256'],'setting',setting)
 PY
 # Use the same environment setup as the existing hcswif wrapper.
 source "$farm_setup"
@@ -30,7 +37,7 @@ for ((segment=0; segment<=max_segment; segment++)); do
   [[ -s nps_coin_${run}.dat.${segment} ]]
 done
 mkdir -p ROOTfiles/OPTICS REPORT_OUTPUT/HMS
-echo "Run $run, all segments 0 through $max_segment; all events; angular plus delta calibration 2026-11-05, YTAR zero-order fixed, constants applied once through hmsflags"
+echo "Run $run, all segments 0 through $max_segment; all events; frozen matrix and offset convention recorded in the provenance below"
 cat ELASTIC_REPLAY_PROVENANCE.json
 hcana -l -b -q "SCRIPTS/NPS/OPTICS/replay_optics_coin_NPS_HMS.C($run,-1,1,$max_segment,0)"
 shopt -s nullglob

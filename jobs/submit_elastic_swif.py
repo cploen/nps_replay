@@ -61,23 +61,30 @@ def raw_segments(runs, mss):
     return result
 
 
-def configuration(repo, runs):
-    for setting, expected in MATRICES.items():
-        matrix = repo / f'DATFILES/nps_hms_optics_{setting}_ang.dat'
+def configuration(repo, runs, calibration=CALIBRATION):
+    for setting, item in calibration['settings'].items():
+        expected = item['matrix_sha256']
+        matrix = repo / item['matrix']
         if hashlib.sha256(matrix.read_bytes()).hexdigest() != expected:
             raise ValueError('Unexpected matrix: ' + str(matrix))
         for line in matrix.read_text().splitlines():
             fields = line.split()
             if len(fields) == 5 and fields[-1] == '00000':
                 raise ValueError('Active 00000 row would duplicate flags offsets: ' + str(matrix))
-        text = (repo / f'PARAM/HMS/GEN/hmsflags_{setting}.param').read_text()
-        expected_flags = CALIBRATION['settings'][setting]['flags_sha256']
+        text = (repo / item['flags']).read_text()
+        expected_flags = item['flags_sha256']
         if hashlib.sha256(text.encode()).hexdigest() != expected_flags:
             raise ValueError('Unexpected HMS flags for ' + setting)
         for name in ['htheta_offset', 'hphi_offset', 'hdelta_offset']:
             values = re.findall(rf'^\s*{name}\s*=\s*([^;\n]+)', text, re.M)
-            if len(values) != 1 or float(values[0]) != CALIBRATION['settings'][setting]['offsets'][name]:
+            if len(values) != 1 or float(values[0]) != item['offsets'][name]:
                 raise ValueError('Unexpected fitted target offset: ' + name)
+        if calibration.get('all_offsets_zero'):
+            for name in ('htheta_offset','hphi_offset','hdelta_offset','hpcentral_offset',
+                         'hthetacentral_offset','h_oopcentral_offset','hmomentum_factor'):
+                values = re.findall(rf'^\s*{name}\s*=\s*([^;\n]+)', text, re.M)
+                if len(values) != 1 or float(values[0]) != 0:
+                    raise ValueError('Zero-offset test has a nonzero or missing flag: ' + name)
     kin = (repo / 'DBASE/NPS/standard_coin.kinematics').read_text()
     block = re.search(r'(?ms)^1253\s*\n(.*?)(?=^\d+\s*(?:-\s*\d+)?\s*$|\Z)', kin)
     angle = re.search(r'^htheta_lab\s*=\s*([^;\s]+)', block[1], re.M) if block else None
@@ -97,14 +104,18 @@ def configuration(repo, runs):
             for run in runs:
                 if interval[0] <= run <= interval[1]:
                     selected[run] = match[1]
+    optics_paths = {item.get('optics',f'PARAM/HMS/GEN/hcana_{setting}.param'):setting
+                    for setting,item in calibration['settings'].items()}
     for run, path in selected.items():
-        match = re.fullmatch(r'PARAM/HMS/GEN/hcana_(5p878|6p117|6p667)\.param', path or '')
-        if not match:
-            raise ValueError(f'Run {run} selects {path}, not one of the three final-fit settings')
-        setting = match[1]
+        if path not in optics_paths:
+            raise ValueError(f'Run {run} selects {path}, not a configured calibration setting')
+        setting = optics_paths[path]
+        item = calibration['settings'][setting]
+        if 'expected_runs' in item and run not in item['expected_runs']:
+            raise ValueError(f'Run {run} resolves to the wrong momentum setting: {setting}')
         text = (repo / path).read_text()
-        if (f'#include "PARAM/HMS/GEN/hmsflags_{setting}.param"' not in text or
-                f"'DATFILES/nps_hms_optics_{setting}_ang.dat'" not in text):
+        if (f'#include "{item["flags"]}"' not in text or
+                f"'{item['matrix']}'" not in text):
             raise ValueError('Unexpected optics configuration: ' + path)
         selected[run] = setting
     return selected
@@ -114,6 +125,7 @@ def main():
     repo = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('runlist', help='one run number per line')
+    parser.add_argument('--calibration',default=CALIBRATION_FILE,help='Committed calibration manifest relative to this checkout')
     parser.add_argument('--sample', choices=['elastic', 'sieve'], default='elastic')
     parser.add_argument('--setup', default=str(repo / 'jobs/setup_elastic_farm.sh'))
     parser.add_argument('--mss', default='/mss/hallc/c-nps/raw')
@@ -128,6 +140,11 @@ def main():
     mode.add_argument('--prepare', action='store_true', help='freeze runtime files and write submission commands without queuing jobs')
     mode.add_argument('--submit', action='store_true', help='freeze inputs, create complete-run jobs and start the workflow')
     args = parser.parse_args()
+    calibration_file = str(Path(args.calibration))
+    calibration = json.loads((repo/calibration_file).read_text())
+    matrices = {key:item['matrix_sha256'] for key,item in calibration['settings'].items()}
+    angular_offsets = {key:{name:item['offsets'][name] for name in ('hphi_offset','htheta_offset')}
+                       for key,item in calibration['settings'].items()}
     sample_dir = 'ELASTIC' if args.sample == 'elastic' else 'OPTICS/SIEVE'
     if args.output is None:
         args.output = f'{DEFAULT_OUTPUT_ROOT}/{sample_dir}'
@@ -136,13 +153,13 @@ def main():
     runs = run_numbers(args.runlist)
     segments = raw_segments(runs, args.mss)
     run_inputs = {run: [item for item in segments if item['run'] == run] for run in runs}
-    settings = configuration(repo, runs)
+    settings = configuration(repo, runs, calibration)
     if not Path(args.setup).is_file():
         raise ValueError('Missing hcswif environment setup: ' + args.setup)
     if not re.fullmatch(r'[A-Za-z0-9_-]+', args.workflow):
         raise ValueError('Workflow name may contain only letters, digits, underscores and hyphens')
     print(f'{len(runs)} complete-run jobs, {len(segments)} raw segments, all events (-1)')
-    for setting in MATRICES:
+    for setting in matrices:
         print(setting, 'runs:', ' '.join(str(r) for r in runs if settings[r] == setting))
     output = Path(args.output).resolve() / args.workflow
     print('Output:', output)
@@ -158,22 +175,21 @@ def main():
     provenance.mkdir()
     log_dir = Path('/farm_out') / os.environ['USER'] / args.workflow
     log_dir.mkdir(parents=True, exist_ok=True)
-    runtime_paths = [CALIBRATION_FILE, 'DBASE/NPS/standard_coin.database', 'DBASE/NPS/standard_coin.kinematics']
-    for setting in MATRICES:
-        runtime_paths.extend([f'DATFILES/nps_hms_optics_{setting}_ang.dat',
-                              f'PARAM/HMS/GEN/hmsflags_{setting}.param',
-                              f'PARAM/HMS/GEN/hcana_{setting}.param'])
+    runtime_paths = [calibration_file, 'DBASE/NPS/standard_coin.database', 'DBASE/NPS/standard_coin.kinematics']
+    for setting,item in calibration['settings'].items():
+        runtime_paths.extend([item['matrix'], item['flags'],
+                              item.get('optics',f'PARAM/HMS/GEN/hcana_{setting}.param')])
     runtime_hashes = {name: hashlib.sha256((repo / name).read_bytes()).hexdigest() for name in runtime_paths}
-    metadata = {'sample': args.sample, 'commit': commit, 'matrix_sha256': MATRICES, 'external_angular_offsets_rad': ANGULAR_OFFSETS_RAD,
-                'external_delta_offsets_fraction': {s: v['offsets']['hdelta_offset'] for s, v in CALIBRATION['settings'].items()},
-                'calibration_file': CALIBRATION_FILE, 'calibration': CALIBRATION,
+    metadata = {'sample': args.sample, 'commit': commit, 'matrix_sha256': matrices, 'external_angular_offsets_rad': angular_offsets,
+                'external_delta_offsets_fraction': {s: v['offsets']['hdelta_offset'] for s, v in calibration['settings'].items()},
+                'calibration_file': calibration_file, 'calibration': calibration,
                 'runtime_file_sha256': runtime_hashes,
-                'source_matrix_sha256': SOURCE_MATRICES,
-                'angular_offset_convention': 'hmsflags; all 00000 values are header comments only',
+                'source_matrix_sha256': calibration.get('source_matrix_sha256',SOURCE_MATRICES),
+                'angular_offset_convention': calibration.get('zero_order_convention','hmsflags; all 00000 values are header comments only'),
                 'delta_offset_convention': 'hdelta_offset is fractional delta, added before H.gtr.dp is multiplied by 100',
                 'matrix_source_repository': 'cploen/hallc_spectrometer_angular_optics',
                 'matrix_source_commit': 'd7c8311763adb843698ca8028f24064f9527f64a',
-                'matrix_source_directory': '07_diagnostics/ytar_zero_refit_20261103',
+                'matrix_source_directory': calibration.get('matrix_source_directory','07_diagnostics/ytar_zero_refit_20261103'),
                 'ytar_constant_fixed': 0,
                 'job_granularity': 'complete_run',
                 'run_segments': {run: [item['segment'] for item in items] for run, items in run_inputs.items()},
