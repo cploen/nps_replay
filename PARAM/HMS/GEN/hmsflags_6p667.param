@@ -10,12 +10,17 @@
 ; In transport coordinates phi = hyptar = dy/dz and theta = hxptar = dx/dz 
 ;    but for unknown reasons the yp offset is named  htheta_offset
 ;    and  the xp offset is named  hphi_offset
-; Do not to change these values, since these are the zero order
-;  CMOP matrix elements. If you do change then your hms sieve
-;  plots will be screwed up.
-  hdelta_offset = 0.       ; (%)   hdelta_tar = hdelta_tar + hdelta_offset
-  htheta_offset = 5.84959117e-4  ; (rad) hyp_tar = hyp_tar + htheta_offset
-  hphi_offset   = 7.11802209e-4 ; (rad) hxp_tar = hxp_tar + hphi_offset
+; HMS angular and delta calibration packaged 2026-11-10.
+; Angular refit 2026-11-03; delta correction fit 2026-11-04.
+; Combined calibration source commit 35bd0e73464e64118fa90f769ad56ba3c7e08711.
+; Fitted delta constant c = 2.70157160042332558e-04 (fractional delta).
+; hpcentral_offset = 100*c percent; p0_new = p0_old*(1+c).
+; Full nonconstant delta column divided by 1+c, including XTAR terms.
+; Angular constants applied here once; matrix 00000 is comment-only.
+; YTAR zero-order coefficient fixed at zero.
+  hdelta_offset = 0.0 ; fractional delta; fitted constant transferred to hpcentral_offset
+  htheta_offset = 5.3123777935165000e-04 ; (rad) hyp_tar constant
+  hphi_offset = 2.0566023391089734e-03 ; (rad) hxp_tar constant
 ;
 
 ;saturation correction flag
@@ -30,10 +35,8 @@
                           ; Data taken with fields set by field00.f or later should set to 2000.
 ; These offsets are determined from elastic ep data.
 ; central field  correction
-  hpcentral_offset = 0.0 ;    
+  hpcentral_offset = 2.70157160042332558e-2 ; percent; fitted delta constant c * 100
   hthetacentral_offset = 0.000 ; (rad) 
   h_oopcentral_offset = 0.00  ; (rad)
 ; sets hpcentral = hpcentral * ( 1. + hpcentral_offset / 100. )
-;      htheta_lab=htheta_lab + hthetacentral_offset/degree 
-
-
+;      htheta_lab=htheta_lab + hthetacentral_offset/degree
